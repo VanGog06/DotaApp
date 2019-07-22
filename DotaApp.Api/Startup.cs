@@ -79,9 +79,6 @@ namespace DotaApp.Api
                 app.UseHsts();
             }
 
-            //ApplicationDbInitializer.SeedRoles(context);
-            //ApplicationDbInitializer.SeedUsers(context);
-
             app.UseCors(x => x
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
