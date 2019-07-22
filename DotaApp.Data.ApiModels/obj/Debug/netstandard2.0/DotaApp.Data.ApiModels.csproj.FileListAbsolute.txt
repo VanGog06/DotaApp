@@ -1,0 +1,14 @@
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\obj\Debug\netstandard2.0\DotaApp.Data.ApiModels.csproj.CoreCompileInputs.cache
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\obj\Debug\netstandard2.0\DotaApp.Data.ApiModels.AssemblyInfoInputs.cache
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\obj\Debug\netstandard2.0\DotaApp.Data.ApiModels.AssemblyInfo.cs
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\bin\Debug\netstandard2.0\DotaApp.Data.ApiModels.deps.json
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\bin\Debug\netstandard2.0\DotaApp.Data.ApiModels.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\bin\Debug\netstandard2.0\DotaApp.Data.Common.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\bin\Debug\netstandard2.0\DotaApp.Data.Common.pdb
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\obj\Debug\netstandard2.0\DotaApp.Data.ApiModels.csprojAssemblyReference.cache
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\obj\Debug\netstandard2.0\DotaApp.Data.ApiModels.csproj.CopyComplete
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\bin\Debug\netstandard2.0\DotaApp.Data.ApiModels.pdb
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\obj\Debug\netstandard2.0\DotaApp.Data.ApiModels.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data.ApiModels\obj\Debug\netstandard2.0\DotaApp.Data.ApiModels.pdb

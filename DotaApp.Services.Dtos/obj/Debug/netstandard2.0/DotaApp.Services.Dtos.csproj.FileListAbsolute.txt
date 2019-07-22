@@ -1,0 +1,11 @@
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\obj\Debug\netstandard2.0\DotaApp.Services.Dtos.csproj.CoreCompileInputs.cache
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\obj\Debug\netstandard2.0\DotaApp.Services.Dtos.AssemblyInfoInputs.cache
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\obj\Debug\netstandard2.0\DotaApp.Services.Dtos.AssemblyInfo.cs
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\bin\Debug\netstandard2.0\DotaApp.Services.Dtos.deps.json
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\bin\Debug\netstandard2.0\DotaApp.Services.Dtos.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\bin\Debug\netstandard2.0\DotaApp.Services.Dtos.pdb
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\obj\Debug\netstandard2.0\DotaApp.Services.Dtos.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\obj\Debug\netstandard2.0\DotaApp.Services.Dtos.pdb
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Users\vango\source\repos\DotaApp\DotaApp.Services.Dtos\obj\Debug\netstandard2.0\DotaApp.Services.Dtos.csproj.CopyComplete

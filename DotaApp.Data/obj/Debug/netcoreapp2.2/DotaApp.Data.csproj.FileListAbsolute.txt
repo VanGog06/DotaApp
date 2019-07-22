@@ -1,0 +1,16 @@
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\bin\Debug\netcoreapp2.2\DotaApp.Data.deps.json
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\bin\Debug\netcoreapp2.2\DotaApp.Data.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\obj\Debug\netcoreapp2.2\DotaApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\obj\Debug\netcoreapp2.2\DotaApp.Data.AssemblyInfoInputs.cache
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\obj\Debug\netcoreapp2.2\DotaApp.Data.AssemblyInfo.cs
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\bin\Debug\netcoreapp2.2\DotaApp.Data.runtimeconfig.json
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\bin\Debug\netcoreapp2.2\DotaApp.Data.runtimeconfig.dev.json
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\obj\Debug\netcoreapp2.2\DotaApp.Data.csprojAssemblyReference.cache
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\bin\Debug\netcoreapp2.2\DotaApp.Data.DbModels.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\bin\Debug\netcoreapp2.2\DotaApp.Data.pdb
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\bin\Debug\netcoreapp2.2\DotaApp.Data.DbModels.pdb
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\obj\Debug\netcoreapp2.2\DotaApp.Data.csproj.CopyComplete
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\obj\Debug\netcoreapp2.2\DotaApp.Data.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\obj\Debug\netcoreapp2.2\DotaApp.Data.pdb
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\bin\Debug\netcoreapp2.2\DotaApp.Data.Common.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Data\bin\Debug\netcoreapp2.2\DotaApp.Data.Common.pdb

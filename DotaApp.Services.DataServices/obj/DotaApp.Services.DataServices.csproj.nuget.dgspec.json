@@ -1,0 +1,309 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.DataServices\\DotaApp.Services.DataServices.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.Common\\DotaApp.Data.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.Common\\DotaApp.Data.Common.csproj",
+        "projectName": "DotaApp.Data.Common",
+        "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.Common\\DotaApp.Data.Common.csproj",
+        "packagesPath": "C:\\Users\\vango\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vango\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.DbModels\\DotaApp.Data.DbModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.DbModels\\DotaApp.Data.DbModels.csproj",
+        "projectName": "DotaApp.Data.DbModels",
+        "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.DbModels\\DotaApp.Data.DbModels.csproj",
+        "packagesPath": "C:\\Users\\vango\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.DbModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vango\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.Common\\DotaApp.Data.Common.csproj": {
+                "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.Common\\DotaApp.Data.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\DotaApp.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\DotaApp.Data.csproj",
+        "projectName": "DotaApp.Data",
+        "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\DotaApp.Data.csproj",
+        "packagesPath": "C:\\Users\\vango\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vango\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.DbModels\\DotaApp.Data.DbModels.csproj": {
+                "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.DbModels\\DotaApp.Data.DbModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.DataServices\\DotaApp.Services.DataServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.DataServices\\DotaApp.Services.DataServices.csproj",
+        "projectName": "DotaApp.Services.DataServices",
+        "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.DataServices\\DotaApp.Services.DataServices.csproj",
+        "packagesPath": "C:\\Users\\vango\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.DataServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vango\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\DotaApp.Data.csproj": {
+                "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\DotaApp.Data.csproj"
+              },
+              "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\DotaApp.Services.Dtos.csproj": {
+                "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\DotaApp.Services.Dtos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\DotaApp.Services.Dtos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\DotaApp.Services.Dtos.csproj",
+        "projectName": "DotaApp.Services.Dtos",
+        "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\DotaApp.Services.Dtos.csproj",
+        "packagesPath": "C:\\Users\\vango\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vango\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
