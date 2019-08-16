@@ -8,8 +8,7 @@ import {
 } from 'react-router-dom';
 
 import Header from './components/common/header';
-import HomePage from './components/home/home';
-
+import Footer from './components/common/footer';
 import Home from './components/home/home';
 import Login from './components/login/login';
 import Register from './components/register/register';
@@ -20,13 +19,15 @@ function App() {
   return (
     <Router history={history}>
       <Header />
-      <HomePage />
+      <Home />
 
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
       </Switch>
+
+      <Footer />
     </Router>
   );
 }
