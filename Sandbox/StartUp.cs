@@ -17,6 +17,8 @@ namespace Sandbox
 {
     class StartUp
     {
+        public static string HERO_STATS_URL = "https://api.opendota.com/api/heroStats";
+
         public static async Task Main(string[] args)
         {
             var config = new MapperConfiguration(cfg =>
@@ -46,7 +48,7 @@ namespace Sandbox
 
         private static async Task PopulateHeroesAndRoles(IMapper mapper, DotaAppContext context, HttpClient client)
         {
-            var response = await client.GetAsync("https://api.opendota.com/api/heroStats");
+            var response = await client.GetAsync(HERO_STATS_URL);
             var content = await response.Content.ReadAsStringAsync();
 
             var heroDtos = JsonConvert.DeserializeObject<List<HeroDto>>(content);
