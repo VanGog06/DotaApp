@@ -23,3 +23,5 @@ C:\Users\vango\source\repos\DotaApp\DotaApp.Api\bin\Debug\netcoreapp2.2\DotaApp.
 C:\Users\vango\source\repos\DotaApp\DotaApp.Api\obj\Debug\netcoreapp2.2\DotaApp.Api.csproj.CopyComplete
 C:\Users\vango\source\repos\DotaApp\DotaApp.Api\bin\Debug\netcoreapp2.2\DotaApp.Services.DataServices.dll
 C:\Users\vango\source\repos\DotaApp\DotaApp.Api\bin\Debug\netcoreapp2.2\DotaApp.Services.DataServices.pdb
+C:\Users\vango\source\repos\DotaApp\DotaApp.Api\bin\Debug\netcoreapp2.2\DotaApp.Services.Mapping.dll
+C:\Users\vango\source\repos\DotaApp\DotaApp.Api\bin\Debug\netcoreapp2.2\DotaApp.Services.Mapping.pdb

@@ -14,6 +14,7 @@
     <ProjectReference Include="..\DotaApp.Data\DotaApp.Data.csproj" />
     <ProjectReference Include="..\DotaApp.Services.DataServices\DotaApp.Services.DataServices.csproj" />
     <ProjectReference Include="..\DotaApp.Services.Dtos\DotaApp.Services.Dtos.csproj" />
+    <ProjectReference Include="..\DotaApp.Services.Mapping\DotaApp.Services.Mapping.csproj" />
   </ItemGroup>
 
 </Project>

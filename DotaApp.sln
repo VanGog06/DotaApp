@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaApp.Data.Common", "Dota
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaApp.Services.DataServices", "DotaApp.Services.DataServices\DotaApp.Services.DataServices.csproj", "{9FC687BF-1A5B-4819-A2C8-F193ED7A36C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaApp.Data.ApiModels", "DotaApp.Data.ApiModels\DotaApp.Data.ApiModels.csproj", "{C753917F-9B97-4153-88FD-8A167BCA8F50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaApp.Data.ApiModels", "DotaApp.Data.ApiModels\DotaApp.Data.ApiModels.csproj", "{C753917F-9B97-4153-88FD-8A167BCA8F50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaApp.Services.Mapping", "DotaApp.Services.Mapping\DotaApp.Services.Mapping.csproj", "{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{C753917F-9B97-4153-88FD-8A167BCA8F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C753917F-9B97-4153-88FD-8A167BCA8F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C753917F-9B97-4153-88FD-8A167BCA8F50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{8C36C73F-446C-44EE-A0B6-4827948F9D07} = {8EBF0091-4A28-4970-B5BA-80B86C26291B}
 		{9FC687BF-1A5B-4819-A2C8-F193ED7A36C7} = {4613E121-F06B-4DF7-AB3B-3DED98DE6DBC}
 		{C753917F-9B97-4153-88FD-8A167BCA8F50} = {8EBF0091-4A28-4970-B5BA-80B86C26291B}
+		{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA} = {4613E121-F06B-4DF7-AB3B-3DED98DE6DBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25B3949D-B646-4344-8980-479CFEC814DE}

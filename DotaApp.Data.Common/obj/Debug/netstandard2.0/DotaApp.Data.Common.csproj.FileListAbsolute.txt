@@ -9,4 +9,3 @@ C:\Users\vango\source\repos\DotaApp\DotaApp.Data.Common\obj\Debug\netstandard2.0
 C:\Users\vango\source\repos\DotaApp\DotaApp.Data.Common\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
 C:\Users\vango\source\repos\DotaApp\DotaApp.Data.Common\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
 C:\Users\vango\source\repos\DotaApp\DotaApp.Data.Common\obj\Debug\netstandard2.0\DotaApp.Data.Common.csproj.CopyComplete
-C:\Users\vango\source\repos\DotaApp\DotaApp.Data.Common\obj\Debug\netstandard2.0\DotaApp.Data.Common.csprojAssemblyReference.cache

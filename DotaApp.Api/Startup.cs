@@ -1,13 +1,10 @@
 ﻿using DotaApp.Data;
-using DotaApp.Data.DbModels;
-using DotaApp.Data.Seeding;
 using DotaApp.Services.DataServices;
 using DotaApp.Services.DataServices.Contracts;
 using DotaApp.Services.Dtos;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -67,7 +64,7 @@ namespace DotaApp.Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DotaAppContext context)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {

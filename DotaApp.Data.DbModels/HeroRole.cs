@@ -4,10 +4,10 @@
     {
         public int HeroId { get; set; }
 
-        public Hero Hero { get; set; }
+        public virtual Hero Hero { get; set; }
 
         public int RoleId { get; set; }
 
-        public Role Role { get; set; }
+        public virtual Role Role { get; set; }
     }
 }

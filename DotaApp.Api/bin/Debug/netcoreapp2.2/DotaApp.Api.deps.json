@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "c343ee0382315237290fa2d77bb2a6ed8836d415"
+    "signature": "f7c80e6d71c2503af63fd2c9d6df8aef4b17bcf0"
   },
   "compilationOptions": {
     "defines": [
@@ -27,6 +27,7 @@
           "DotaApp.Data": "1.0.0",
           "DotaApp.Services.DataServices": "1.0.0",
           "DotaApp.Services.Dtos": "1.0.0",
+          "DotaApp.Services.Mapping": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0"
@@ -36,6 +37,21 @@
         },
         "compile": {
           "DotaApp.Api.dll": {}
+        }
+      },
+      "AutoMapper/8.1.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "8.1.1.0",
+            "fileVersion": "8.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/2.2.6": {
@@ -459,7 +475,8 @@
       "DotaApp.Services.DataServices/1.0.0": {
         "dependencies": {
           "DotaApp.Data": "1.0.0",
-          "DotaApp.Services.Dtos": "1.0.0"
+          "DotaApp.Services.Dtos": "1.0.0",
+          "DotaApp.Services.Mapping": "1.0.0"
         },
         "runtime": {
           "DotaApp.Services.DataServices.dll": {}
@@ -474,6 +491,17 @@
         },
         "compile": {
           "DotaApp.Services.Dtos.dll": {}
+        }
+      },
+      "DotaApp.Services.Mapping/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.1.1"
+        },
+        "runtime": {
+          "DotaApp.Services.Mapping.dll": {}
+        },
+        "compile": {
+          "DotaApp.Services.Mapping.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3364,6 +3392,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/8.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GKBliBukkLG0z/U0T4Jy+yEpr5bKDImQ9nEy/T8jqNulwNkWDjiEWa9TL4yCxIhleDbmVmw2xYSaJ3Eb2OcSUg==",
+      "path": "automapper/8.1.1",
+      "hashPath": "automapper.8.1.1.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore/2.2.6": {
       "type": "package",
       "serviceable": true,
@@ -3546,6 +3581,11 @@
       "sha512": ""
     },
     "DotaApp.Services.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DotaApp.Services.Mapping/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

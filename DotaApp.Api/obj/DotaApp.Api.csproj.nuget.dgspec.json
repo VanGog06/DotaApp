@@ -38,6 +38,9 @@
               },
               "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\DotaApp.Services.Dtos.csproj": {
                 "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\DotaApp.Services.Dtos.csproj"
+              },
+              "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Mapping\\DotaApp.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Mapping\\DotaApp.Services.Mapping.csproj"
               }
             }
           }
@@ -234,6 +237,10 @@
               "target": "Package",
               "version": "[2.2.6, )"
             },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[2.2.6, )"
@@ -298,6 +305,9 @@
               },
               "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\DotaApp.Services.Dtos.csproj": {
                 "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Dtos\\DotaApp.Services.Dtos.csproj"
+              },
+              "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Mapping\\DotaApp.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Mapping\\DotaApp.Services.Mapping.csproj"
               }
             }
           }
@@ -363,6 +373,62 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Mapping\\DotaApp.Services.Mapping.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Mapping\\DotaApp.Services.Mapping.csproj",
+        "projectName": "DotaApp.Services.Mapping",
+        "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Mapping\\DotaApp.Services.Mapping.csproj",
+        "packagesPath": "C:\\Users\\vango\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Services.Mapping\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vango\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
