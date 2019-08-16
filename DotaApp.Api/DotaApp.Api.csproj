@@ -17,4 +17,8 @@
     <ProjectReference Include="..\DotaApp.Services.Mapping\DotaApp.Services.Mapping.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="src\" />
+  </ItemGroup>
+
 </Project>
