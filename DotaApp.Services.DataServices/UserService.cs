@@ -83,7 +83,7 @@ namespace DotaApp.Services.DataServices
 
             CreatePasswordHash(userDto.Password, out var passwordHash, out var passwordSalt);
 
-            var userRole = this.context.Roles.FirstOrDefault(ur => ur.Name == "User");
+            var userRole = this.context.IdentityRoles.FirstOrDefault(ur => ur.Name == "User");
 
             var user = new User
             {

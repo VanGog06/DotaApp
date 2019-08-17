@@ -4,7 +4,6 @@ using DotaApp.Services.DataServices.Contracts;
 using DotaApp.Services.Dtos.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
 
 namespace DotaApp.Api.Controllers
 {

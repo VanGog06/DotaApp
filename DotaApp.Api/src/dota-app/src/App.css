@@ -4,8 +4,14 @@ html, body {
   margin: 0px;
 }
 
-body {
-  overflow: hidden;
+.full_screen_parent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.full_screen_child {
+  flex: 1;
 }
 
 footer {
