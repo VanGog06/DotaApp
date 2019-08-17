@@ -1752,6 +1752,16 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "DotaApp.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/DotaApp.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DotaApp.Common.dll": {}
+        }
+      },
       "DotaApp.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -5986,6 +5996,11 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "DotaApp.Common/1.0.0": {
+      "type": "project",
+      "path": "../DotaApp.Common/DotaApp.Common.csproj",
+      "msbuildProject": "../DotaApp.Common/DotaApp.Common.csproj"
+    },
     "DotaApp.Data/1.0.0": {
       "type": "project",
       "path": "../DotaApp.Data/DotaApp.Data.csproj",
@@ -6014,6 +6029,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "DotaApp.Common >= 1.0.0",
       "DotaApp.Data >= 1.0.0",
       "DotaApp.Services.Dtos >= 1.0.0",
       "DotaApp.Services.Mapping >= 1.0.0",
@@ -6050,6 +6066,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Common\\DotaApp.Common.csproj": {
+              "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Common\\DotaApp.Common.csproj"
+            },
             "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\DotaApp.Data.csproj": {
               "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\DotaApp.Data.csproj"
             },

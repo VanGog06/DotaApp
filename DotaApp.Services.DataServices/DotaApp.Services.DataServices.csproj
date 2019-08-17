@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DotaApp.Common\DotaApp.Common.csproj" />
     <ProjectReference Include="..\DotaApp.Data\DotaApp.Data.csproj" />
     <ProjectReference Include="..\DotaApp.Services.Dtos\DotaApp.Services.Dtos.csproj" />
     <ProjectReference Include="..\DotaApp.Services.Mapping\DotaApp.Services.Mapping.csproj" />

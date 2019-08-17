@@ -9,7 +9,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using DotaApp.Services.Mapping;
+using System.Collections.Generic;
+using DotaApp.Data.DbModels;
+using DotaApp.Common;
+using DotaApp.Data.Common;
 
 namespace DotaApp.Services.DataServices
 {
@@ -69,6 +72,32 @@ namespace DotaApp.Services.DataServices
                 Username = user.Username,
                 Token = tokenHandler.WriteToken(token)
             };
+
+            return userDto;
+        }
+
+        public UserDto Register(UserDto userDto)
+        {
+            if (this.context.Users.Any(x => x.Username == userDto.Username))
+                throw new DotaException(Constants.UsernameTaken);
+
+            CreatePasswordHash(userDto.Password, out var passwordHash, out var passwordSalt);
+
+            var userRole = this.context.Roles.FirstOrDefault(ur => ur.Name == "User");
+
+            var user = new User
+            {
+                Email = userDto.Email,
+                FirstName = userDto.FirstName,
+                LastName = userDto.LastName,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt,
+                Username = userDto.Password,
+                Roles = new List<UserRole> { new UserRole { RoleId = userRole.Id } }
+            };
+
+            this.context.Users.Add(user);
+            this.context.SaveChanges();
 
             return userDto;
         }

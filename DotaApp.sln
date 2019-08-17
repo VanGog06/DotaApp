@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaApp.Services.DataServic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaApp.Data.ApiModels", "DotaApp.Data.ApiModels\DotaApp.Data.ApiModels.csproj", "{C753917F-9B97-4153-88FD-8A167BCA8F50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaApp.Services.Mapping", "DotaApp.Services.Mapping\DotaApp.Services.Mapping.csproj", "{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaApp.Services.Mapping", "DotaApp.Services.Mapping\DotaApp.Services.Mapping.csproj", "{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaApp.Common", "DotaApp.Common\DotaApp.Common.csproj", "{9573FB23-A366-4B18-8D4D-94553C04042F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,10 @@ Global
 		{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9573FB23-A366-4B18-8D4D-94553C04042F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9573FB23-A366-4B18-8D4D-94553C04042F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9573FB23-A366-4B18-8D4D-94553C04042F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9573FB23-A366-4B18-8D4D-94553C04042F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{9FC687BF-1A5B-4819-A2C8-F193ED7A36C7} = {4613E121-F06B-4DF7-AB3B-3DED98DE6DBC}
 		{C753917F-9B97-4153-88FD-8A167BCA8F50} = {8EBF0091-4A28-4970-B5BA-80B86C26291B}
 		{33D599E8-59A4-4EA8-8E7B-D62EFEAD9AFA} = {4613E121-F06B-4DF7-AB3B-3DED98DE6DBC}
+		{9573FB23-A366-4B18-8D4D-94553C04042F} = {6F5A6059-BE17-448B-82EC-7B7113029C88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25B3949D-B646-4344-8980-479CFEC814DE}
