@@ -8,9 +8,12 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import useForm from '../../hooks/useForm';
+import { useForm } from '../../hooks/useForm';
 
-import { userActions } from '../../actions';
+import {
+  userActions,
+  alertActions
+} from '../../actions';
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -79,6 +82,11 @@ const Register = () => {
       email: state.email.value
     };
 
+    if (user.password.localeCompare(user.confirmPassword) !== 0) {
+      dispatch(alertActions.error('Passwords do not match'));
+      return;
+    }
+
     dispatch(userActions.register(user));
   };
 
@@ -123,8 +131,8 @@ const Register = () => {
               value={state.password.value}
               onChange={handleOnChange}
               required
-              isValid={state.password.value.length > 0}
-              isInvalid={state.password.value.length === 0}
+              isValid={state.password.value.length > 0 && state.password.value.localeCompare(state.confirmPassword.value) === 0}
+              isInvalid={state.password.value.length === 0 || state.password.value.localeCompare(state.confirmPassword.value) !== 0}
             />
           </Col>
           {state.password.error && <Form.Label column sm={{span: 4, offset: 5}} className='text-danger text-bold'>{state.password.error}</Form.Label>}
@@ -142,8 +150,8 @@ const Register = () => {
               value={state.confirmPassword.value}
               onChange={handleOnChange}
               required
-              isValid={state.confirmPassword.value.length > 0}
-              isInvalid={state.confirmPassword.value.length === 0}
+              isValid={state.confirmPassword.value.length > 0 && state.password.value.localeCompare(state.confirmPassword.value) === 0}
+              isInvalid={state.confirmPassword.value.length === 0 || state.password.value.localeCompare(state.confirmPassword.value) !== 0}
             />
           </Col>
           {state.confirmPassword.error && <Form.Label column sm={{span: 4, offset: 5}} className='text-danger text-bold'>{state.confirmPassword.error}</Form.Label>}

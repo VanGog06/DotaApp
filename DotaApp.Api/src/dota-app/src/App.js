@@ -19,6 +19,7 @@ import Footer from './components/common/footer';
 import Home from './components/home/home';
 import Login from './components/login/login';
 import Register from './components/register/register';
+import Heroes from './components/heroes/heroes';
 
 import { history } from './helpers';
 
@@ -40,17 +41,19 @@ function App() {
     <div className='full_screen_parent full_screen_child'>
       <Router history={history}>
         <Header />
-          {alert.message &&
-            <Alert variant={alert.type}>
-              {alert.message}
-            </Alert>
-          }
+        
+        {alert.message &&
+          <Alert variant={alert.type}>
+            {alert.message}
+          </Alert>
+        }
 
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/login' component={Login} />
-            <Route path='/register' component={Register} />
-          </Switch>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/login' component={Login} />
+          <Route path='/register' component={Register} />
+          <Route path='/heroes' component={Heroes} />
+        </Switch>
 
         <Footer />
       </Router>

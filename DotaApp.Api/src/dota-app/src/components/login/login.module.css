@@ -1,4 +1,5 @@
 .container {
-  background-image: url('../../assets/login.jpg');
+  background-image: url('../../assets/generic-background.jpg');
   flex: 1;
+  padding-top: 50px;
 }

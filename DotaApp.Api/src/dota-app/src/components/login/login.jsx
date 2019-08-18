@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './login.module.css';
 
 import { useDispatch } from 'react-redux';
@@ -8,12 +8,17 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import useForm from '../../hooks/useForm';
+import { useForm } from '../../hooks/useForm';
 
 import { userActions } from '../../actions';
 
 const Login = () => {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    // reset login status
+    dispatch(userActions.logout());
+  }, [dispatch]);
 
   const stateSchema = {
     username: { value: '', error: '' },

@@ -26,13 +26,15 @@ export const user = (state = initialState, action) => {
         user: action.user
       };
     case userConstants.LOGIN_FAILURE:
-      return { ...initialState };
+      return { ...state };
     case userConstants.REGISTER_REQUEST:
       return { ...state };
     case userConstants.REGISTER_SUCCESS:
       return { ...state };
     case userConstants.REGISTER_FAILURE:
       return { ...state };
+    case userConstants.LOGOUT:
+      return { ...state, isLoggedIn: false, user: null };
     default:
       return { ...state };
   }

@@ -1,5 +1,6 @@
 import {
-  userConstants, appConstants
+  userConstants,
+  appConstants
 } from '../constants';
 
 import { userService } from '../services';
@@ -47,7 +48,13 @@ const register = user => {
   };
 };
 
+const logout = _ => {
+  userService.logout();
+  return { type: userConstants.LOGOUT };
+}
+
 export const userActions = {
   login,
-  register
+  register,
+  logout
 };

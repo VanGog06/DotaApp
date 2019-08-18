@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const useForm = (stateSchema, validationSchema = {}, callback) => {
+export const useForm = (stateSchema, validationSchema = {}, callback) => {
   const [state, setState] = useState(stateSchema);
   const [disable, setDisable] = useState(true);
   const [isDirty, setIsDirty] = useState(false);
@@ -81,5 +81,3 @@ const useForm = (stateSchema, validationSchema = {}, callback) => {
 
   return { state, disable, handleOnChange, handleOnSubmit };
 };
-
-export default useForm;
