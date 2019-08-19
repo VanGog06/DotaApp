@@ -1,9 +1,16 @@
 .container {
   background-image: url('../../assets/generic-background.jpg');
   flex: 1;
+}
+
+.heroContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 25px 0 50px 0;
+}
+
+.inputGroup {
+  padding-top: 10px;
 }
