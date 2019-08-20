@@ -4918,6 +4918,9 @@
       "DotaApp.Services.Dtos/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DotaApp.Data.DbModels": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/DotaApp.Services.Dtos.dll": {}
         },

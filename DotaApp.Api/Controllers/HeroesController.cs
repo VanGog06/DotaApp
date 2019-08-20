@@ -21,5 +21,13 @@ namespace DotaApp.Api.Controllers
 
             return Ok(heroes);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById([FromRoute]int id)
+        {
+            var hero = this.heroService.GetById(id);
+
+            return Ok(hero);
+        }
     }
 }

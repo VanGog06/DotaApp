@@ -25,6 +25,29 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "DotaApp.Data.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/DotaApp.Data.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DotaApp.Data.Common.dll": {}
+        }
+      },
+      "DotaApp.Data.DbModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DotaApp.Data.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DotaApp.Data.DbModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DotaApp.Data.DbModels.dll": {}
+        }
       }
     }
   },
@@ -171,10 +194,21 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "DotaApp.Data.Common/1.0.0": {
+      "type": "project",
+      "path": "../DotaApp.Data.Common/DotaApp.Data.Common.csproj",
+      "msbuildProject": "../DotaApp.Data.Common/DotaApp.Data.Common.csproj"
+    },
+    "DotaApp.Data.DbModels/1.0.0": {
+      "type": "project",
+      "path": "../DotaApp.Data.DbModels/DotaApp.Data.DbModels.csproj",
+      "msbuildProject": "../DotaApp.Data.DbModels/DotaApp.Data.DbModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "DotaApp.Data.DbModels >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -207,7 +241,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.DbModels\\DotaApp.Data.DbModels.csproj": {
+              "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.DbModels\\DotaApp.Data.DbModels.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
