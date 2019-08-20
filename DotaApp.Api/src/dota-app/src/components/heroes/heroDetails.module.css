@@ -1,0 +1,115 @@
+.container {
+  background-color: rgb(25, 32, 35);
+  background-image: linear-gradient(135deg, rgb(46, 45, 69), rgb(28, 33, 39));
+  flex: 1;
+  padding-top: 50px;
+}
+
+.heroBanner {
+  position: relative;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.heroBackground {
+  filter: blur(25px);
+  height: 125%;
+  object-fit: cover;
+  opacity: 0.45;
+  position: absolute;
+  width: 125%;
+  background-repeat: no-repeat;
+}
+
+.heroBannerDetails {
+  display: flex;
+  padding: 60px 40px;
+}
+
+.heroAvatar {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 32px;
+  display: block;
+  /* flex-shrink: 0; */
+  height: 128px;
+  object-fit: cover;
+  width: 180px;
+  border-radius: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-image: initial;
+  padding: 0px;
+}
+
+.heroNameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+}
+
+.heroName {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Droid Sans", Ubuntu, Cantarell, "Fira Sans", Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+.heroRoles {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Droid Sans", Ubuntu, Cantarell, "Fira Sans", Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  font-weight: 300;
+}
+
+.heroRoles span {
+  color: #fff;
+}
+
+.stats {
+  display: flex;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 8px;
+  margin: auto;
+  padding: 6px;
+}
+
+.statCircle {
+  flex-shrink: 0;
+  height: 8px;
+  margin-right: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.statText {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-block;
+}
+
+.strengthBackground {
+  background: rgb(244, 67, 54);
+}
+
+.strengthTextColor {
+  color: rgb(244, 67, 54);
+}
+
+.agilityBackground {
+  background: rgb(57, 212, 2);
+}
+
+.agilityTextColor {
+  color: rgb(57, 212, 2);
+}
+
+.intellectBackground {
+  background: rgb(1, 169, 244);
+}
+
+.intellectTextColor {
+  color: rgb(1, 169, 244);
+}
