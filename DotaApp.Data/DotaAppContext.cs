@@ -18,6 +18,10 @@ namespace DotaApp.Data
 
         public DbSet<Role> Roles { get; set; }
 
+        public DbSet<Ability> Abilities { get; set; }
+
+        public DbSet<AbilityAttribute> AbilityAttributes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -29,6 +33,14 @@ namespace DotaApp.Data
 
             builder.Entity<HeroRole>()
                 .HasKey(hr => new { hr.HeroId, hr.RoleId });
+
+            builder.Entity<Hero>()
+                .HasMany(h => h.Abilities)
+                .WithOne(a => a.Hero);
+
+            builder.Entity<Ability>()
+                .HasMany(a => a.AbilityAttributes)
+                .WithOne(aa => aa.Ability);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

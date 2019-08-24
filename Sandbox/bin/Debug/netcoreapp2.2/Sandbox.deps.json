@@ -1201,6 +1201,9 @@
         }
       },
       "DotaApp.Services.Dtos/1.0.0": {
+        "dependencies": {
+          "DotaApp.Data.DbModels": "1.0.0"
+        },
         "runtime": {
           "DotaApp.Services.Dtos.dll": {}
         }
