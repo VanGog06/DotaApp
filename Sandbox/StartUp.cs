@@ -50,7 +50,7 @@ namespace Sandbox
                 using (var client = new HttpClient())
                 {
                     //await PopulateHeroesAndRoles(mapper, context, client);
-                    PopulateHeroAbilities(mapper, context);
+                    //PopulateHeroAbilities(mapper, context);
                 }
             }
         }

@@ -2,6 +2,7 @@
 using System.Linq;
 using DotaApp.Data;
 using DotaApp.Services.DataServices.Contracts;
+using DotaApp.Services.Dtos.Abilities;
 using DotaApp.Services.Dtos.Heroes;
 using DotaApp.Services.Dtos.Roles;
 using DotaApp.Services.Mapping;
@@ -37,6 +38,7 @@ namespace DotaApp.Services.DataServices
         {
             var hero = this.context.Heroes
                 .Include(h => h.Roles)
+                .Include(h => h.Abilities)
                 .FirstOrDefault(h => h.Id == id);
 
             if (hero == null)
@@ -74,6 +76,29 @@ namespace DotaApp.Services.DataServices
                 TurnRate = hero.TurnRate,
                 Roles = hero.Roles
                     .Select(r => new RoleDto { Id = r.RoleId, Name = r.Role.Name })
+                    .ToList(),
+                Abilities = hero.Abilities
+                    .Where(a => !string.IsNullOrEmpty(a.Description))
+                    .Select(a => new AbilityDto
+                    {
+                        AbilityName = a.AbilityName,
+                        Behavior = a.Behavior,
+                        Cooldown = a.Cooldown,
+                        DamageType = a.DamageType,
+                        Description = a.Description,
+                        Image = a.Image,
+                        ManaCost = a.ManaCost,
+                        Pierce = a.Pierce,
+                        AbilityAttributes = a.AbilityAttributes
+                            .Select(aa => new AbilityAttributeDto
+                            {
+                                Generated = aa.Generated,
+                                Header = aa.Header,
+                                Key = aa.Key,
+                                Value = aa.Value
+                            })
+                            .ToList()
+                    })
                     .ToList()
             };
 

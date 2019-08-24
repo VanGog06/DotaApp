@@ -1,4 +1,5 @@
-﻿using DotaApp.Services.Dtos.Roles;
+﻿using DotaApp.Services.Dtos.Abilities;
+using DotaApp.Services.Dtos.Roles;
 using System.Collections.Generic;
 
 namespace DotaApp.Services.Dtos.Heroes
@@ -57,5 +58,7 @@ namespace DotaApp.Services.Dtos.Heroes
         public int Legs { get; set; }
 
         public virtual ICollection<RoleDto> Roles { get; set; }
+
+        public virtual ICollection<AbilityDto> Abilities { get; set; }
     }
 }
