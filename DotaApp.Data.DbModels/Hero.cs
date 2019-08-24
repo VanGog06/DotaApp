@@ -8,6 +8,7 @@ namespace DotaApp.Data.DbModels
         public Hero()
         {
             this.Roles = new HashSet<HeroRole>();
+            this.Abilities = new HashSet<Ability>();
         }
 
         public string Name { get; set; }
@@ -61,5 +62,7 @@ namespace DotaApp.Data.DbModels
         public int Legs { get; set; }
 
         public virtual ICollection<HeroRole> Roles { get; set; }
+
+        public virtual ICollection<Ability> Abilities { get; set; }
     }
 }
