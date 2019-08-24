@@ -3,6 +3,8 @@ import styles from './heroDetails.module.css';
 
 import Image from 'react-bootstrap/Image';
 
+import HeroStats from './heroStats'
+
 import { useHero } from '../../hooks/useHero';
 
 const HeroDetails = ({ match }) => {
@@ -41,9 +43,19 @@ const HeroDetails = ({ match }) => {
                   <div className={`${styles.statText} ${styles.intellectTextColor}`}>{hero.baseIntellect} + {hero.intellectGain}</div>
                 </div>
               </div>
+
+              <div className={`col-sm-12 ${styles.abilityContainer}`}>
+                {hero.abilities.map((ability, index) =>
+                  <div className={styles.ability} key={index}>
+                    <Image className={`${styles.abilityImage}`} src={`https://api.opendota.com${ability.image}`} fluid />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
+
+        <HeroStats hero={hero}/>
       </div>
     :
       ''
