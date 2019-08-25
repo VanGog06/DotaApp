@@ -1,0 +1,16 @@
+.form {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 25px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  font-style: italic;
+  text-align: left;
+}
+
+.addBtn {
+  margin-top: 10px;
+}

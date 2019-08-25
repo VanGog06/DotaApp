@@ -4,6 +4,8 @@ import styles from './itemDetails.module.css';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 
+import Comments from '../comments/comments';
+
 import { useItem } from '../../hooks/useItem';
 
 const ItemDetails = ({ match }) => {
@@ -30,13 +32,15 @@ const ItemDetails = ({ match }) => {
 
             <div className={`${styles.attributes} col-sm-3`}>
               {item.itemAttributes.map(attribute =>
-                <div>
+                <div key={attribute.key}>
                   {attribute.header}<span className='text-white font-weight-bold'>{attribute.value}</span> {attribute.footer}
                 </div>
               )}
             </div>
           </Row>
         </div>
+
+        <Comments />
       </div>
     :
       ''
