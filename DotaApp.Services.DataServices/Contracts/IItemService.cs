@@ -6,5 +6,7 @@ namespace DotaApp.Services.DataServices.Contracts
     public interface IItemService
     {
         ICollection<ItemCardDto> GetAll();
+
+        ItemDto GetById(int id);
     }
 }
