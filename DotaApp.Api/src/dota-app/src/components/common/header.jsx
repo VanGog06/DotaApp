@@ -29,6 +29,10 @@ const Header = () => {
           <IndexLinkContainer to='/heroes'>
             <Nav.Link>Heroes</Nav.Link>
           </IndexLinkContainer>
+
+          <IndexLinkContainer to='/items'>
+            <Nav.Link>Items</Nav.Link>
+          </IndexLinkContainer>
         </Nav>
 
         {userData.isLoggedIn ?
