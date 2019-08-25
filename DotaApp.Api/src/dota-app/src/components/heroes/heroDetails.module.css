@@ -30,7 +30,6 @@
 .heroAvatar {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 32px;
   display: block;
-  /* flex-shrink: 0; */
   height: 128px;
   object-fit: cover;
   width: 180px;

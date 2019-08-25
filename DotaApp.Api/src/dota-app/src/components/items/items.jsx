@@ -18,10 +18,7 @@ const Items = _ => {
   useEffect(() => {
     const filterItems = (items, input) => {
       return items
-        .filter(item => {
-          console.log(item.name);
-          return item && item.name.toLowerCase().indexOf(input) !== -1
-        });
+        .filter(item => item.name.toLowerCase().indexOf(input) !== -1);
     }
 
     const filteredHeroes = filterItems(items, input);

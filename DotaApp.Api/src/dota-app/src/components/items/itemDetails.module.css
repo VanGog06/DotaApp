@@ -1,0 +1,56 @@
+.container {
+  background-color: rgb(25, 32, 35);
+  background-image: linear-gradient(135deg, rgb(46, 45, 69), rgb(28, 33, 39));
+  flex: 1;
+  padding-top: 75px;
+}
+
+.itemBanner {
+  position: relative;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.itemBackground {
+  filter: blur(25px);
+  height: 125%;
+  object-fit: cover;
+  opacity: 0.45;
+  position: absolute;
+  width: 125%;
+  background-repeat: no-repeat;
+}
+
+.itemBannerDetails {
+  display: flex;
+  padding: 60px 40px;
+}
+
+.itemAvatar {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 32px;
+  display: block;
+  height: 100px;
+  object-fit: cover;
+  width: 150px;
+  border-radius: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-image: initial;
+  padding: 0px;
+  z-index: 1
+}
+
+.itemDetails {
+  color: rgba(255, 255, 255, 0.75);
+  padding: 50px 30px;
+}
+
+.attributes {
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}

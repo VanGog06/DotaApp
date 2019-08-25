@@ -15,6 +15,17 @@ const getAll = _ => {
     .then(handleResponse);
 };
 
+const getById = id => {
+  const requestOptions = {
+    method: 'GET',
+    headers: authHeader()
+  };
+
+  return fetch(`${appConstants.apiUrl}/items/${id}`, requestOptions)
+  .then(handleResponse);
+};
+
 export const itemService = {
-  getAll
+  getAll,
+  getById
 };

@@ -16,12 +16,31 @@ const getAll = _ => {
       .then(items => {
         dispatch(getAllSuccess(items));
       }, error => {
-        dispatch(getAllFailure(error));
+        dispatch(getAllFailure());
+        dispatch(alertActions.error(error.toString()));
+      });
+  };
+};
+
+const getItemRequest = _ => { return { type: itemConstants.GET_ITEM_REQUEST }};
+const getItemSuccess = item => { return { type: itemConstants.GET_ITEM_SUCCESS, item }};
+const getItemFailure = _ => { return { type: itemConstants.GET_ITEM_FAILURE }};
+
+const getById = id => {
+  return dispatch => {
+    dispatch(getItemRequest());
+
+    itemService.getById(id)
+      .then(item => {
+        dispatch(getItemSuccess(item));
+      }, error => {
+        dispatch(getItemFailure());
         dispatch(alertActions.error(error.toString()));
       });
   };
 };
 
 export const itemActions = {
-  getAll
+  getAll,
+  getById
 };
