@@ -33,7 +33,8 @@ namespace Sandbox
                     .ForMember(dest => dest.Cooldown, opt => opt.Ignore())
                     .ForMember(dest => dest.AbilityAttributes, opt => opt.Ignore());
 
-                cfg.CreateMap<AbilityAttributeDto, AbilityAttribute>();
+                cfg.CreateMap<ItemDto, Item>()
+                    .ForMember(dest => dest.ItemAttributes, opt => opt.Ignore());
             });
             var mapper = config.CreateMapper();
 
@@ -51,6 +52,7 @@ namespace Sandbox
                 {
                     //await PopulateHeroesAndRoles(mapper, context, client);
                     //PopulateHeroAbilities(mapper, context);
+                    PopulateItems(mapper, context);
                 }
             }
         }
@@ -152,8 +154,6 @@ namespace Sandbox
 
                     var abilityAttributes = new List<AbilityAttribute>();
 
-                    Console.WriteLine(entry.Key);
-
                     foreach (var attribute in entry.Value.AbilityAttributes)
                     {
                         var attributeDto = new AbilityAttribute
@@ -181,9 +181,51 @@ namespace Sandbox
                 }
             }
 
-            Console.WriteLine();
-
             context.Abilities.AddRange(abilities);
+            context.SaveChanges();
+        }
+
+        private static void PopulateItems(IMapper mapper, DotaAppContext context)
+        {
+            string lines = File.ReadAllText(@"C:\Users\vango\source\repos\DotaApp\Sandbox\items.json");
+            var parsedItems = JsonConvert.DeserializeObject<Dictionary<string, ItemDto>>(lines);
+
+            var items = new List<Item>();
+
+            foreach (KeyValuePair<string, ItemDto> entry in parsedItems)
+            {
+                var item = mapper.Map<Item>(entry.Value);
+
+                var itemAttributes = new List<ItemAttribute>();
+
+                foreach (var attribute in entry.Value.ItemAttributes)
+                {
+                    var itemAttribute = new ItemAttribute
+                    {
+                        Footer = attribute.Footer,
+                        Header = attribute.Header,
+                        Key = attribute.Key
+                    };
+
+                    var valueType = attribute.Value != null ? attribute.Value.GetType().ToString() : typeof(string).ToString();
+
+                    if (valueType == typeof(string).FullName)
+                    {
+                        itemAttribute.Value = attribute.Value;
+                    }
+                    else
+                    {
+                        itemAttribute.Value = string.Join(";", attribute.Value);
+                    }
+
+                    itemAttributes.Add(itemAttribute);
+                }
+
+                item.ItemAttributes = itemAttributes;
+                items.Add(item);
+            }
+
+            context.Items.AddRange(items);
             context.SaveChanges();
         }
 
