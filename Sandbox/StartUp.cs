@@ -52,7 +52,7 @@ namespace Sandbox
                 {
                     //await PopulateHeroesAndRoles(mapper, context, client);
                     //PopulateHeroAbilities(mapper, context);
-                    PopulateItems(mapper, context);
+                    //PopulateItems(mapper, context);
                 }
             }
         }

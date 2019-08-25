@@ -136,6 +136,66 @@
         }
       }
     },
+    "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.ApiModels\\DotaApp.Data.ApiModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.ApiModels\\DotaApp.Data.ApiModels.csproj",
+        "projectName": "DotaApp.Data.ApiModels",
+        "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.ApiModels\\DotaApp.Data.ApiModels.csproj",
+        "packagesPath": "C:\\Users\\vango\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.ApiModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vango\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.Common\\DotaApp.Data.Common.csproj": {
+                "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.Common\\DotaApp.Data.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.Common\\DotaApp.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -358,6 +418,9 @@
             "projectReferences": {
               "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Common\\DotaApp.Common.csproj": {
                 "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Common\\DotaApp.Common.csproj"
+              },
+              "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.ApiModels\\DotaApp.Data.ApiModels.csproj": {
+                "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data.ApiModels\\DotaApp.Data.ApiModels.csproj"
               },
               "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\DotaApp.Data.csproj": {
                 "projectPath": "C:\\Users\\vango\\source\\repos\\DotaApp\\DotaApp.Data\\DotaApp.Data.csproj"

@@ -2906,7 +2906,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -4876,6 +4876,20 @@
           "bin/placeholder/DotaApp.Data.dll": {}
         }
       },
+      "DotaApp.Data.ApiModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DotaApp.Data.Common": "1.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "bin/placeholder/DotaApp.Data.ApiModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DotaApp.Data.ApiModels.dll": {}
+        }
+      },
       "DotaApp.Data.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -4905,6 +4919,7 @@
         "dependencies": {
           "DotaApp.Common": "1.0.0",
           "DotaApp.Data": "1.0.0",
+          "DotaApp.Data.ApiModels": "1.0.0",
           "DotaApp.Services.Dtos": "1.0.0",
           "DotaApp.Services.Mapping": "1.0.0"
         },
@@ -8311,10 +8326,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8337,7 +8352,7 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
       ]
     },
@@ -13393,6 +13408,11 @@
       "type": "project",
       "path": "../DotaApp.Data/DotaApp.Data.csproj",
       "msbuildProject": "../DotaApp.Data/DotaApp.Data.csproj"
+    },
+    "DotaApp.Data.ApiModels/1.0.0": {
+      "type": "project",
+      "path": "../DotaApp.Data.ApiModels/DotaApp.Data.ApiModels.csproj",
+      "msbuildProject": "../DotaApp.Data.ApiModels/DotaApp.Data.ApiModels.csproj"
     },
     "DotaApp.Data.Common/1.0.0": {
       "type": "project",
