@@ -22,6 +22,10 @@ namespace DotaApp.Data
 
         public DbSet<AbilityAttribute> AbilityAttributes { get; set; }
 
+        public DbSet<Item> Items { get; set; }
+
+        public DbSet<ItemAttribute> ItemAttributes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -41,6 +45,10 @@ namespace DotaApp.Data
             builder.Entity<Ability>()
                 .HasMany(a => a.AbilityAttributes)
                 .WithOne(aa => aa.Ability);
+
+            builder.Entity<Item>()
+                .HasMany(i => i.ItemAttributes)
+                .WithOne(ia => ia.Item);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
