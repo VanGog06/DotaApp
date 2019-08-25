@@ -18,8 +18,10 @@ namespace DotaApp.Services.DataServices
         public ICollection<ItemCardDto> GetAll()
         {
             var items = this.context.Items
+                .Where(i => !string.IsNullOrEmpty(i.Name))
                 .Select(i => new ItemCardDto
                 {
+                    Id = i.Id,
                     Image = i.Image,
                     Name = i.Name
                 })

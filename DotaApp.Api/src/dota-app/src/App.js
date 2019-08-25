@@ -21,6 +21,7 @@ import Login from './components/login/login';
 import Register from './components/register/register';
 import Heroes from './components/heroes/heroes';
 import HeroDetails from './components/heroes/heroDetails';
+import Items from './components/items/items';
 
 import { history } from './helpers';
 
@@ -55,6 +56,7 @@ function App() {
           <Route path='/register' component={Register} />
           <Route path='/heroes/:id' component={HeroDetails} />
           <Route path='/heroes' component={Heroes} />
+          <Route path='/items' component={Items} />
         </Switch>
 
         <Footer />

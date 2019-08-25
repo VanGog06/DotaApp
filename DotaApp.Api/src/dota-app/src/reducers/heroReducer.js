@@ -8,18 +8,18 @@ const initialState = {
 export const heroes = (state = initialState, action) => {
   switch (action.type) {
     case heroConstants.GET_HEROES_REQUEST:
-      return { ...state };
+      return { ...state, all: [ ...state.all ], hero: { ...state.hero } };
     case heroConstants.GET_HEROES_SUCCESS:
-      return { ...state, all: action.heroes };
+      return { ...state, all: action.heroes, hero: { ...state.hero } };
     case heroConstants.GET_HEROES_FAILURE:
-      return { ...state };
+      return { ...state, all: [ ...state.all ], hero: { ...state.hero } };
     case heroConstants.GET_HERO_REQUEST:
-      return { ...state };
+      return { ...state, all: [ ...state.all ], hero: { ...state.hero } };
     case heroConstants.GET_HERO_SUCCESS:
-      return { ...state, hero: action.hero };
+      return { ...state, hero: action.hero, all: [ ...state.all ] };
     case heroConstants.GET_HERO_FAILURE:
-      return { ...state };
+      return { ...state, all: [ ...state.all ], hero: { ...state.hero } };
     default:
-      return { ...state };
+      return { ...state, all: [ ...state.all ], hero: { ...state.hero } };
   }
 };

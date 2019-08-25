@@ -22,7 +22,7 @@ const HeroDetails = ({ match }) => {
             <div className={`${styles.heroNameContainer} col-sm-5`}>
               <h2 className={styles.heroName}>{hero.name}</h2>
               <p className={styles.heroRoles}>
-                <span>{hero.attackType}</span> - {hero.roles.map(role => role.name).join(', ')}
+                <span>{hero.attackType}</span> - {hero.roles ? hero.roles.map(role => role.name).join(', ') : ''}
               </p>
             </div>
 
@@ -45,11 +45,11 @@ const HeroDetails = ({ match }) => {
               </div>
 
               <div className={`col-sm-12 ${styles.abilityContainer}`}>
-                {hero.abilities.map((ability, index) =>
+                {hero.abilities ?hero.abilities.map((ability, index) =>
                   <div className={styles.ability} key={index}>
                     <Image className={`${styles.abilityImage}`} src={`https://api.opendota.com${ability.image}`} fluid />
                   </div>
-                )}
+                ) : null}
               </div>
             </div>
           </div>
