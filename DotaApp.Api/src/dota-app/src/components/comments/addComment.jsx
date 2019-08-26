@@ -1,11 +1,30 @@
 import React, { useState } from 'react';
 import styles from './addComment.module.css';
 
+import {
+  useSelector,
+  useDispatch
+} from 'react-redux';
+
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import { commentActions } from '../../actions';
+
 const AddComment = _ => {
   const [comment, setComment] = useState('');
+  const user = useSelector(state => state.user);
+
+  const dispatch = useDispatch();
+
+  const handleAdd = _ => {
+    const commentObject = {
+      comment,
+      userId: user.user.id 
+    };
+
+    dispatch(commentActions.addComment(commentObject));
+  };
 
   return (
     <Form className={`${styles.form} col-sm-6 offset-sm-3`}>
@@ -24,6 +43,7 @@ const AddComment = _ => {
         variant='primary'
         type='submit'
         disabled={comment.length < 10}
+        onClick={handleAdd}
         >
           Add
         </Button>
