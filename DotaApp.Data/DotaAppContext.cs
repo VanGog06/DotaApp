@@ -26,6 +26,8 @@ namespace DotaApp.Data
 
         public DbSet<ItemAttribute> ItemAttributes { get; set; }
 
+        public DbSet<Comment> Comments { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -49,6 +51,14 @@ namespace DotaApp.Data
             builder.Entity<Item>()
                 .HasMany(i => i.ItemAttributes)
                 .WithOne(ia => ia.Item);
+
+            builder.Entity<Item>()
+                .HasMany(h => h.Comments)
+                .WithOne(c => c.Item);
+
+            builder.Entity<Comment>()
+                .Property(c => c.CreatedOn)
+                .HasDefaultValueSql("getutcdate()");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
