@@ -13,14 +13,17 @@ import { commentActions } from '../../actions';
 
 const AddComment = ({ handleCommentAdded }) => {
   const [comment, setComment] = useState('');
+
   const user = useSelector(state => state.user);
+  const items = useSelector(state => state.items);
 
   const dispatch = useDispatch();
 
   const handleAdd = _ => {
     const commentObject = {
       comment,
-      userId: user.user.id 
+      username: user.user.username,
+      itemId: items.item.id
     };
 
     dispatch(commentActions.addComment(commentObject));
@@ -46,9 +49,9 @@ const AddComment = ({ handleCommentAdded }) => {
         type='submit'
         disabled={comment.length < 10}
         onClick={handleAdd}
-        >
-          Add
-        </Button>
+      >
+        Add
+      </Button>
     </Form>
   );
 };
