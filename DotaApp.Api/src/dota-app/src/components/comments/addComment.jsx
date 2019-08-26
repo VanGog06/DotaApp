@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/Button';
 
 import { commentActions } from '../../actions';
 
-const AddComment = _ => {
+const AddComment = ({ handleCommentAdded }) => {
   const [comment, setComment] = useState('');
   const user = useSelector(state => state.user);
 
@@ -24,6 +24,8 @@ const AddComment = _ => {
     };
 
     dispatch(commentActions.addComment(commentObject));
+
+    handleCommentAdded();
   };
 
   return (

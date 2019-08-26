@@ -11,6 +11,10 @@ const Comments = _ => {
   const [selectedKey, setSelectedKey] = useState('all');
   const isLoggedIn = useSelector(state => state.user.isLoggedIn);
 
+  const handleCommentAdded = _ => {
+    setSelectedKey('all');
+  };
+
   return (
     <div className={styles.container}>
       {isLoggedIn ?
@@ -30,7 +34,7 @@ const Comments = _ => {
       {selectedKey === 'all' ?
         <div>All</div>
       :
-        <AddComment />
+        <AddComment handleCommentAdded={handleCommentAdded} />
       }
     </div>
   );
