@@ -6,6 +6,9 @@ namespace DotaApp.Services.Dtos.Comments
     public class CommentDto
     {
         [Required]
+        public int Id { get; set; }
+
+        [Required]
         [MinLength(10)]
         public string Comment { get; set; }
 

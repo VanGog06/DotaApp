@@ -22,6 +22,25 @@ const addComment = comment => {
   };
 };
 
+const allCommentsRequest = _ => { return { type: commentConstants.ALL_COMMENTS_REQUEST }};
+const allCommentsSuccess = comments => { return { type: commentConstants.ALL_COMMENTS_SUCCESS, comments }};
+const allCommentsFailure = _ => { return { type: commentConstants.ALL_COMMENTS_FAILURE }};
+
+const getAll = itemId => {
+  return dispatch => {
+    dispatch(allCommentsRequest());
+
+    commentService.all(itemId)
+      .then(comments => {
+        dispatch(allCommentsSuccess(comments));
+      }, error => {
+        dispatch(allCommentsFailure());
+        dispatch(alertActions.error(error.toString()));
+      });
+  };
+};
+
 export const commentActions = {
-  addComment
+  addComment,
+  getAll
 };

@@ -40,7 +40,7 @@ const ItemDetails = ({ match }) => {
           </Row>
         </div>
 
-        <Comments />
+        <Comments itemId={match.params.id} />
       </div>
     :
       ''

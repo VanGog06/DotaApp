@@ -16,6 +16,17 @@ const addComment = comment => {
     .then(handleResponse);
 };
 
+const all = itemId => {
+  const requestOptions = {
+    method: 'GET',
+    headers: authHeader()
+  };
+
+  return fetch(`${appConstants.apiUrl}/comments/items/${itemId}`, requestOptions)
+    .then(handleResponse);
+}
+
 export const commentService = {
-  addComment
+  addComment,
+  all
 };

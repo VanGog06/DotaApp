@@ -6,9 +6,14 @@ import { useSelector } from 'react-redux';
 import Nav from 'react-bootstrap/Nav';
 
 import AddComment from './addComment';
+import Comment from './comment';
 
-const Comments = _ => {
+import { useComments } from '../../hooks/useComments';
+
+const Comments = ({ itemId }) => {
   const [selectedKey, setSelectedKey] = useState('all');
+  const comments = useComments(itemId);
+
   const isLoggedIn = useSelector(state => state.user.isLoggedIn);
 
   const handleCommentAdded = _ => {
@@ -32,7 +37,13 @@ const Comments = _ => {
       : null}
 
       {selectedKey === 'all' ?
-        <div>All</div>
+        <div className='col-sm-6 offset-sm-3'>
+          {
+            comments ? comments.all
+              .map((comment, index) => <Comment key={index} {...comment} />)
+            : null
+          }
+        </div>
       :
         <AddComment handleCommentAdded={handleCommentAdded} />
       }

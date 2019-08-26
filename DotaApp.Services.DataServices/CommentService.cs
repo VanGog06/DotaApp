@@ -66,7 +66,9 @@ namespace DotaApp.Services.DataServices
                 comments.Add(comment);
             }
 
-            return comments;
+            return comments
+                .OrderByDescending(c => c.CreatedOn)
+                .ToList();
         }
     }
 }

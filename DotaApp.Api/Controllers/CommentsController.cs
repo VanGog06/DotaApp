@@ -17,7 +17,7 @@ namespace DotaApp.Api.Controllers
             this.commentService = commentService;
         }
 
-        [HttpGet("items/{id}")]
+        [HttpGet("items/{itemId}")]
         public IActionResult All([FromRoute] int itemId)
         {
             var comments = this.commentService.All(itemId);
@@ -26,7 +26,7 @@ namespace DotaApp.Api.Controllers
         }
 
         [HttpPost("add")]
-        [Authorize]
+        [Authorize(Roles = "User")]
         public IActionResult Add([FromBody] AddCommentDto addComment)
         {
             if (!this.ModelState.IsValid)

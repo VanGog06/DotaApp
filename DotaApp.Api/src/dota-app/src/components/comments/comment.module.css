@@ -1,0 +1,17 @@
+.row {
+  border-bottom: 1px solid #fff;
+}
+
+.name {
+  color: rgba(255, 255, 255, 1);
+}
+
+.createdOn {
+  color: rgba(255, 255, 255, 1);
+  font-size: 0.75rem;
+  margin-bottom: 15px;
+}
+
+.comment {
+  color: rgba(255, 255, 255, 0.75);
+}
