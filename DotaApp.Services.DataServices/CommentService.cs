@@ -58,6 +58,7 @@ namespace DotaApp.Services.DataServices
 
                 var comment = new CommentDto
                 {
+                    Id = dbComment.Id,
                     Comment = dbComment.CommentMessage,
                     Username = dbComment.Username,
                     CreatedOn = createdOnLocal

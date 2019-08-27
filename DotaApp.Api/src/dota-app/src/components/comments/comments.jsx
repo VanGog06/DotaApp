@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import styles from './comments.module.css';
 
-import { useSelector } from 'react-redux';
+import {
+  useSelector,
+  useDispatch
+} from 'react-redux';
 
 import Nav from 'react-bootstrap/Nav';
 
@@ -10,14 +13,21 @@ import Comment from './comment';
 
 import { useComments } from '../../hooks/useComments';
 
+import { adminActions } from '../../actions';
+
 const Comments = ({ itemId }) => {
   const [selectedKey, setSelectedKey] = useState('all');
   const comments = useComments(itemId);
+  const dispatch = useDispatch();
 
   const isLoggedIn = useSelector(state => state.user.isLoggedIn);
 
   const handleCommentAdded = _ => {
     setSelectedKey('all');
+  };
+
+  const handleDeleteComment = id => {
+    dispatch(adminActions.deleteComment(id));
   };
 
   return (
@@ -40,7 +50,7 @@ const Comments = ({ itemId }) => {
         <div className='col-sm-6 offset-sm-3'>
           {
             comments ? comments.all
-              .map((comment, index) => <Comment key={index} {...comment} />)
+              .map((comment, index) => <Comment key={index} {...comment} handleDeleteComment={handleDeleteComment} />)
             : null
           }
         </div>
