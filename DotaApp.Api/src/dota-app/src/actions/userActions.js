@@ -53,8 +53,32 @@ const logout = _ => {
   return { type: userConstants.LOGOUT };
 }
 
+const updateProfileRequest = _ => { return { type: userConstants.UPDATE_PROFILE_REQUEST }};
+const updateProfileSuccess = _ => { return { type: userConstants.UPDATE_PROFILE_SUCCESS }};
+const updateProfileFailure = _ => { return { type: userConstants.UPDATE_PROFILE_FAILURE }};
+
+const update = profile => {
+  return dispatch => {
+    dispatch(updateProfileRequest());
+
+    userService.update(profile)
+      .then(_ => {
+        dispatch(updateProfileSuccess());
+        dispatch(alertActions.success(appConstants.accountUpdated));
+
+        setTimeout(() => {
+          userService.logout();
+        }, 1000);
+      }, error => {
+        dispatch(updateProfileFailure());
+        dispatch(alertActions.error(error.toString()));
+      });
+  };
+};
+
 export const userActions = {
   login,
   register,
-  logout
+  logout,
+  update
 };

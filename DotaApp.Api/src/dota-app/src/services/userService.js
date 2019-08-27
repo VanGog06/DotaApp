@@ -38,8 +38,20 @@ const logout = _ => {
   localStorage.removeItem('user');
 };
 
+const update = profile => {
+  const requestOptions = {
+    method: 'POST',
+    headers: authHeader(),
+    body: JSON.stringify(profile)
+  };
+
+  return fetch(`${appConstants.apiUrl}/users/update/${profile.id}`, requestOptions)
+    .then(handleResponse);
+};
+
 export const userService = {
   login,
   register,
-  logout
+  logout,
+  update
 };

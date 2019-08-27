@@ -14,6 +14,7 @@ import {
 
 import Alert from 'react-bootstrap/Alert';
 
+import { PrivateRoute } from './components/privateRoute';
 import Header from './components/common/header';
 import Footer from './components/common/footer';
 import Home from './components/home/home';
@@ -23,6 +24,7 @@ import Heroes from './components/heroes/heroes';
 import HeroDetails from './components/heroes/heroDetails';
 import Items from './components/items/items';
 import ItemDetails from './components/items/itemDetails';
+import Profile from './components/profile/profile';
 
 import { history } from './helpers';
 
@@ -55,6 +57,7 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
+          <PrivateRoute path='/profile' component={Profile} />
           <Route path='/heroes/:id' component={HeroDetails} />
           <Route path='/heroes' component={Heroes} />
           <Route path='/items/:id' component={ItemDetails} />

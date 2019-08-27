@@ -26,7 +26,7 @@ namespace DotaApp.Api.Controllers
         }
 
         [HttpPost("add")]
-        [Authorize(Roles = "User")]
+        [Authorize]
         public IActionResult Add([FromBody] AddCommentDto addComment)
         {
             if (!this.ModelState.IsValid)

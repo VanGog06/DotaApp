@@ -35,6 +35,12 @@ export const user = (state = initialState, action) => {
       return { ...state, user: { ...state.user } };
     case userConstants.LOGOUT:
       return { ...state, isLoggedIn: false, user: null };
+    case userConstants.UPDATE_PROFILE_REQUEST:
+      return { ...state, user: { ...state.user } };
+    case userConstants.UPDATE_PROFILE_SUCCESS:
+      return { ...state, user: { ...state.user } };
+    case userConstants.UPDATE_PROFILE_FAILURE:
+      return { ...state, user: { ...state.user } };
     default:
       return { ...state, user: { ...state.user } };
   }
