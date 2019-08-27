@@ -102,6 +102,30 @@ namespace DotaApp.Services.DataServices
             return userDto;
         }
 
+        public void Update(UpdateUserDto profile)
+        {
+            var dbUser = this.context.Users
+                .FirstOrDefault(u => u.Username == profile.Username);
+
+            if (dbUser == null)
+            {
+                throw new DotaException(Constants.UserNotFound);
+            }
+
+            if (!VerifyPasswordHash(profile.CurrentPassword, dbUser.PasswordHash, dbUser.PasswordSalt))
+            {
+                throw new DotaException(Constants.ProvidedPasswordIsIncorrect);
+            }
+
+            CreatePasswordHash(profile.NewPassword, out var newPasswordHash, out var newPasswordSalt);
+
+            dbUser.PasswordHash = newPasswordHash;
+            dbUser.PasswordSalt = newPasswordSalt;
+
+            this.context.Users.Update(dbUser);
+            this.context.SaveChanges();
+        }
+
         private static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             if (password == null) throw new ArgumentNullException(nameof(password));

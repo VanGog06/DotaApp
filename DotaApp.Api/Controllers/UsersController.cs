@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DotaApp.Api.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : Controller
@@ -19,7 +19,6 @@ namespace DotaApp.Api.Controllers
             this.userService = userService;
         }
 
-        [AllowAnonymous]
         [HttpPost("authenticate")]
         public IActionResult Authenticate([FromBody] UsernamePasswordDto usernamePasswordDto)
         {
@@ -38,7 +37,6 @@ namespace DotaApp.Api.Controllers
             return Ok(user);
         }
 
-        [AllowAnonymous]
         [HttpPost("register")]
         public IActionResult Register([FromBody] UserDto userDto)
         {
@@ -52,6 +50,26 @@ namespace DotaApp.Api.Controllers
                 var user = this.userService.Register(userDto);
 
                 return Ok(user);
+            }
+            catch (DotaException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPost("update/{id}")]
+        public IActionResult Update([FromBody] UpdateUserDto profile)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return BadRequest(this.ModelState);
+            }
+
+            try
+            {
+                this.userService.Update(profile);
+
+                return Ok();
             }
             catch (DotaException ex)
             {

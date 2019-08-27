@@ -67,8 +67,8 @@ const update = profile => {
         dispatch(alertActions.success(appConstants.accountUpdated));
 
         setTimeout(() => {
-          userService.logout();
-        }, 1000);
+          history.push('/login');
+        }, 1500);
       }, error => {
         dispatch(updateProfileFailure());
         dispatch(alertActions.error(error.toString()));

@@ -7,5 +7,7 @@ namespace DotaApp.Services.DataServices.Contracts
         UserWithoutPasswordDto Authenticate(UsernamePasswordDto usernamePasswordDto);
 
         UserDto Register(UserDto userDto);
+
+        void Update(UpdateUserDto profile);
     }
 }

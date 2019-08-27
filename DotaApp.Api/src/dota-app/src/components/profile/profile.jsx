@@ -73,11 +73,10 @@ const Profile = _ => {
       id: state.id.value,
       username: state.username.value,
       currentPassword: state.currentPassword.value,
-      newPassword: state.newPassword.value,
-      confirmPassword: state.confirmPassword.value,
+      newPassword: state.newPassword.value
     };
 
-    if (user.newPassword.localeCompare(user.confirmPassword) !== 0) {
+    if (profile.newPassword.localeCompare(state.confirmPassword.value) !== 0) {
       dispatch(alertActions.error('Passwords do not match'));
       return;
     }
