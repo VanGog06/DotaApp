@@ -36,9 +36,9 @@ namespace DotaApp.Api.Controllers
 
             try
             {
-                this.commentService.AddComment(addComment);
+                var commentId = this.commentService.AddComment(addComment);
 
-                return Ok();
+                return Ok(commentId);
             }
             catch (DotaException ex)
             {

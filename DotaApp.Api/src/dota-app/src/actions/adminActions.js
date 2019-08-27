@@ -1,4 +1,7 @@
-import { adminConstants } from '../constants';
+import {
+  adminConstants,
+  appConstants
+} from '../constants';
 
 import { adminService } from '../services';
 
@@ -15,6 +18,11 @@ const deleteComment = id => {
     adminService.deleteComment(id)
       .then(_ => {
         dispatch(deleteCommentSuccess(id));
+        dispatch(alertActions.success(appConstants.commentDeleted));
+
+        setTimeout(() => {
+          dispatch(alertActions.clear());
+        }, 3000);
       }, error => {
         dispatch(deleteCommentFailure());
         dispatch(alertActions.error(error.toString()));

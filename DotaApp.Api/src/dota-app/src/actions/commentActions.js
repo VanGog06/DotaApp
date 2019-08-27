@@ -13,8 +13,8 @@ const addComment = comment => {
     dispatch(addCommentRequest());
 
     commentService.addComment(comment)
-      .then(_ => {
-        dispatch(addCommentSuccess(comment));
+      .then(commentId => {
+        dispatch(addCommentSuccess({...comment, id: commentId}));
       }, error => {
         dispatch(addCommentFailure());
         dispatch(alertActions.error(error.toString()));

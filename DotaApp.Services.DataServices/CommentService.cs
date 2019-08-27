@@ -20,7 +20,7 @@ namespace DotaApp.Services.DataServices
             this.context = context;
         }
 
-        public void AddComment(AddCommentDto addComment)
+        public int AddComment(AddCommentDto addComment)
         {
             var item = this.context.Items
                 .FirstOrDefault(i => i.Id == addComment.ItemId);
@@ -40,6 +40,8 @@ namespace DotaApp.Services.DataServices
 
             this.context.Comments.Add(comment);
             this.context.SaveChanges();
+
+            return comment.Id;
         }
 
         public ICollection<CommentDto> All(int itemId)

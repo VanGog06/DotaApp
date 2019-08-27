@@ -7,6 +7,6 @@ namespace DotaApp.Services.DataServices.Contracts
     {
         ICollection<CommentDto> All(int itemId);
 
-        void AddComment(AddCommentDto addComment);
+        int AddComment(AddCommentDto addComment);
     }
 }
