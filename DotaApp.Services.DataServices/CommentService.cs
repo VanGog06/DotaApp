@@ -47,7 +47,7 @@ namespace DotaApp.Services.DataServices
         public ICollection<CommentDto> All(int itemId)
         {
             var dbComments = this.context.Comments
-                .Where(c => c.ItemId == itemId)
+                .Where(c => c.ItemId == itemId && !c.IsPending && c.IsApproved)
                 .ToList();
 
             var comments = new List<CommentDto>();

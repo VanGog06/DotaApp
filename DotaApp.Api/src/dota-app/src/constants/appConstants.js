@@ -3,5 +3,6 @@ export const appConstants = {
   registrationCompleted: 'Account registered successfully',
   accountUpdated: 'Account password was updated successfully',
   adminUsername: 'admin',
-  commentDeleted: 'Comment deleted successfully'
+  commentDeleted: 'Comment deleted successfully',
+  commentSubmitted: 'Comment submitted for review successfully'
 };

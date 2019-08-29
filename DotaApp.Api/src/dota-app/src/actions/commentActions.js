@@ -1,4 +1,4 @@
-import { commentConstants } from '../constants';
+import { commentConstants, appConstants } from '../constants';
 
 import { commentService } from '../services';
 
@@ -15,6 +15,11 @@ const addComment = comment => {
     commentService.addComment(comment)
       .then(commentId => {
         dispatch(addCommentSuccess({...comment, id: commentId}));
+        dispatch(alertActions.success(appConstants.commentSubmitted));
+
+        setTimeout(() => {
+          dispatch(alertActions.clear());
+        }, 3000);
       }, error => {
         dispatch(addCommentFailure());
         dispatch(alertActions.error(error.toString()));

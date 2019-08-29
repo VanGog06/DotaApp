@@ -12,7 +12,7 @@ export const comments = (state = initialState, action) => {
     case commentConstants.ADD_COMMENT_REQUEST:
       return { ...state, all: [ ...state.all ]};
     case commentConstants.ADD_COMMENT_SUCCESS:
-      return { ...state, all: [ { ...action.comment, createdOn: new Date().toLocaleString()}, ...state.all ]};
+      return { ...state, all: [ ...state.all ]};
     case commentConstants.ADD_COMMENT_FAILURE:
       return { ...state, all: [ ...state.all ]};
     case commentConstants.ALL_COMMENTS_REQUEST:
