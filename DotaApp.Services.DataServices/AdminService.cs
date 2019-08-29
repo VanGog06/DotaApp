@@ -63,5 +63,39 @@ namespace DotaApp.Services.DataServices
 
             return comments;
         }
+
+        public void Approve(int id)
+        {
+            var comment = this.context.Comments
+                .FirstOrDefault(c => c.Id == id);
+
+            if (comment == null)
+            {
+                throw new DotaException(Constants.InvalidOperation);
+            }
+
+            comment.IsPending = false;
+            comment.IsApproved = true;
+
+            this.context.Comments.Update(comment);
+            this.context.SaveChanges();
+        }
+
+        public void Reject(int id)
+        {
+            var comment = this.context.Comments
+                .FirstOrDefault(c => c.Id == id);
+
+            if (comment == null)
+            {
+                throw new DotaException(Constants.InvalidOperation);
+            }
+
+            comment.IsPending = false;
+            comment.IsApproved = false;
+
+            this.context.Comments.Update(comment);
+            this.context.SaveChanges();
+        }
     }
 }

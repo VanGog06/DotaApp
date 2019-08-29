@@ -46,5 +46,35 @@ namespace DotaApp.Api.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
+        [HttpPost("Approve")]
+        public IActionResult Approve([FromRoute]int id)
+        {
+            try
+            {
+                this.adminService.Approve(id);
+
+                return Ok();
+            }
+            catch (DotaException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPost("Reject")]
+        public IActionResult Reject([FromRoute]int id)
+        {
+            try
+            {
+                this.adminService.Reject(id);
+
+                return Ok();
+            }
+            catch (DotaException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }

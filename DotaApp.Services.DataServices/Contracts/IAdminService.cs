@@ -8,5 +8,9 @@ namespace DotaApp.Services.DataServices.Contracts
         void DeleteCommentById(int id);
 
         ICollection<CommentsReviewDto> Review();
+
+        void Approve(int id);
+
+        void Reject(int id);
     }
 }

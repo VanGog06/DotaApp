@@ -19,7 +19,7 @@ const Review = _ => {
 
   return (
     <div className={styles.container}>
-      <h1 className='text-white text-center pt-4 pb-3'>Comment review area</h1>
+      <h1 className='text-white text-center pt-4 pb-3'>Comments review area</h1>
 
       {reviewComments.map((comment, index) =>
         <Card className={`${styles.card} p-3 m-3 col-sm-3`} key={index}>
