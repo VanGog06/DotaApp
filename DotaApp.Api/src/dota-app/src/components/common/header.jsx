@@ -7,6 +7,8 @@ import Nav from 'react-bootstrap/Nav';
 
 import { IndexLinkContainer } from 'react-router-bootstrap';
 
+import { appConstants } from '../../constants';
+
 const Header = () => {
   const userData = useSelector(state => state.user);
 
@@ -33,6 +35,12 @@ const Header = () => {
           <IndexLinkContainer to='/items'>
             <Nav.Link>Items</Nav.Link>
           </IndexLinkContainer>
+
+          {userData.user && userData.user.username && userData.user.username.localeCompare(appConstants.adminUsername) === 0 ?
+            <IndexLinkContainer to='/review'>
+              <Nav.Link>Review</Nav.Link>
+            </IndexLinkContainer>
+          : null}
         </Nav>
 
         {userData.isLoggedIn ?

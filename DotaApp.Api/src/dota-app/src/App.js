@@ -25,6 +25,7 @@ import HeroDetails from './components/heroes/heroDetails';
 import Items from './components/items/items';
 import ItemDetails from './components/items/itemDetails';
 import Profile from './components/profile/profile';
+import Review from './components/comments/review';
 
 import { history } from './helpers';
 
@@ -58,6 +59,7 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
           <PrivateRoute path='/profile' component={Profile} />
+          <PrivateRoute path='/review' component={Review} />
           <Route path='/heroes/:id' component={HeroDetails} />
           <Route path='/heroes' component={Heroes} />
           <Route path='/items/:id' component={ItemDetails} />

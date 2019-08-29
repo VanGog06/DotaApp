@@ -31,5 +31,20 @@ namespace DotaApp.Api.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
+        [HttpGet("review")]
+        public IActionResult Review()
+        {
+            try
+            {
+                var comments = this.adminService.Review();
+
+                return Ok(comments);
+            }
+            catch (DotaException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }

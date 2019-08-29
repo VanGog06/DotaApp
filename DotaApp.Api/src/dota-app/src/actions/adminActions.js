@@ -30,6 +30,25 @@ const deleteComment = id => {
   };
 };
 
+const commentsReviewRequest = _ => { return { type: adminConstants.COMMENTS_REVIEW_REQUEST }};
+const commentsReviewSuccess = reviewComments => { return { type: adminConstants.COMMENTS_REVIEW_SUCCESS, reviewComments }};
+const commentsReviewFailure = _ => { return { type: adminConstants.COMMENTS_REVIEW_FAILURE }};
+
+const review = _ => {
+  return dispatch => {
+    dispatch(commentsReviewRequest());
+
+    adminService.review()
+      .then(reviewComments => {
+        dispatch(commentsReviewSuccess(reviewComments));
+      }, error => {
+        dispatch(commentsReviewFailure());
+        dispatch(alertActions.error(error.toString()));
+      });
+  };
+};
+
 export const adminActions = {
-  deleteComment
+  deleteComment,
+  review
 };
