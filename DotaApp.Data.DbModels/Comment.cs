@@ -22,6 +22,12 @@ namespace DotaApp.Data.DbModels
         public int ItemId { get; set; }
 
         [Required]
+        public bool IsPending { get; set; }
+
+        [Required]
+        public bool IsApproved { get; set; }
+
+        [Required]
         public virtual Item Item { get; set; }
     }
 }

@@ -59,6 +59,14 @@ namespace DotaApp.Data
             builder.Entity<Comment>()
                 .Property(c => c.CreatedOn)
                 .HasDefaultValueSql("getutcdate()");
+
+            builder.Entity<Comment>()
+                .Property(c => c.IsPending)
+                .HasDefaultValue(true);
+
+            builder.Entity<Comment>()
+                .Property(c => c.IsApproved)
+                .HasDefaultValue(false);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
