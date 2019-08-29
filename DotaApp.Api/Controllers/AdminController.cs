@@ -47,14 +47,15 @@ namespace DotaApp.Api.Controllers
             }
         }
 
-        [HttpPost("Approve")]
+        [HttpPost("approve/{id}")]
         public IActionResult Approve([FromRoute]int id)
         {
             try
             {
                 this.adminService.Approve(id);
+                var comments = this.adminService.Review();
 
-                return Ok();
+                return Ok(comments);
             }
             catch (DotaException ex)
             {
@@ -62,14 +63,15 @@ namespace DotaApp.Api.Controllers
             }
         }
 
-        [HttpPost("Reject")]
+        [HttpPost("reject/{id}")]
         public IActionResult Reject([FromRoute]int id)
         {
             try
             {
                 this.adminService.Reject(id);
+                var comments = this.adminService.Review();
 
-                return Ok();
+                return Ok(comments);
             }
             catch (DotaException ex)
             {

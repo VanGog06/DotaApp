@@ -1,24 +1,29 @@
 import React from 'react';
 import styles from './review.module.css';
 
+import { useDispatch } from 'react-redux';
+
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import { useReview } from '../../hooks/useReview';
 
+import { adminActions } from '../../actions';
+
 const Review = _ => {
   const reviewComments = useReview();
+  const dispatch = useDispatch();
 
   const handleApprove = id => {
-    console.log(id);
+    dispatch(adminActions.approve(id));
   };
 
   const handleReject = id => {
-    console.log(id);
+    dispatch(adminActions.reject(id));
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} mb-5`}>
       <h1 className='text-white text-center pt-4 pb-3'>Comments review area</h1>
 
       {reviewComments.map((comment, index) =>

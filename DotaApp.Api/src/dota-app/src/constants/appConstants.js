@@ -4,5 +4,7 @@ export const appConstants = {
   accountUpdated: 'Account password was updated successfully',
   adminUsername: 'admin',
   commentDeleted: 'Comment deleted successfully',
-  commentSubmitted: 'Comment submitted for review successfully'
+  commentSubmitted: 'Comment submitted for review successfully',
+  commentApproved: 'Comment approved successfully',
+  commentRejected: 'Comment rejected successfully'
 };

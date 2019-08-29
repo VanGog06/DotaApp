@@ -48,7 +48,57 @@ const review = _ => {
   };
 };
 
+const approveCommentRequest = _ => { return { type: adminConstants.APPROVE_COMMENT_REQUEST }};
+const approveCommentSuccess = reviewComments => { return { type: adminConstants.APPROVE_COMMENT_SUCCESS, reviewComments }};
+const approveCommentFailure = _ => { return { type: adminConstants.APPROVE_COMMENT_FAILURE }};
+
+const approve = id => {
+  return dispatch => {
+    dispatch(approveCommentRequest());
+
+    adminService.approve(id)
+      .then(reviewComments => {
+        dispatch(approveCommentSuccess(reviewComments));
+
+        dispatch(alertActions.success(appConstants.commentApproved));
+
+        setTimeout(() => {
+          dispatch(alertActions.clear());
+        }, 3000);
+      }, error => {
+        dispatch(approveCommentFailure());
+        dispatch(alertActions.error(error.toString()));
+      });
+  };
+};
+
+const rejectCommentRequest = _ => { return { type: adminConstants.REJECT_COMMENT_REQUEST }};
+const rejectCommentSuccess = reviewComments => { return { type: adminConstants.REJECT_COMMENT_SUCCESS, reviewComments }};
+const rejectCommentFailure = _ => { return { type: adminConstants.REJECT_COMMENT_FAILURE }};
+
+const reject = id => {
+  return dispatch => {
+    dispatch(rejectCommentRequest());
+
+    adminService.reject(id)
+      .then(reviewComments => {
+        dispatch(rejectCommentSuccess(reviewComments));
+
+        dispatch(alertActions.success(appConstants.commentRejected));
+
+        setTimeout(() => {
+          dispatch(alertActions.clear());
+        }, 3000);
+      }, error => {
+        dispatch(rejectCommentFailure());
+        dispatch(alertActions.error(error.toString()));
+      });
+  };
+};
+
 export const adminActions = {
   deleteComment,
-  review
+  review,
+  approve,
+  reject
 };
