@@ -1,0 +1,23 @@
+.container {
+  background-image: url('../../assets/generic-background.jpg');
+  flex: 1;
+}
+
+.table {
+  margin-bottom: 100px;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 80px;
+  display: inline-block;
+}
+
+.name {
+  display: inline-block;
+  margin-left: 15px;
+}

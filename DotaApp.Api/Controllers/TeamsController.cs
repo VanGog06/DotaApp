@@ -9,17 +9,17 @@ namespace DotaApp.Api.Controllers
     [AllowAnonymous]
     public class TeamsController : Controller
     {
-        private readonly ITeamsService teamsService;
+        private readonly ITeamService teamService;
 
-        public TeamsController(ITeamsService teamsService)
+        public TeamsController(ITeamService teamService)
         {
-            this.teamsService = teamsService;
+            this.teamService = teamService;
         }
 
         [HttpGet("all")]
         public IActionResult All()
         {
-            var teams = this.teamsService.All();
+            var teams = this.teamService.All();
 
             return Ok(teams);
         }

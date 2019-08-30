@@ -7,7 +7,7 @@ using DotaApp.Services.Dtos.Teams;
 
 namespace DotaApp.Services.DataServices
 {
-    public class TeamService : ITeamsService
+    public class TeamService : ITeamService
     {
         private readonly DotaAppContext context;
 
@@ -21,6 +21,7 @@ namespace DotaApp.Services.DataServices
             var dbTeams = this.context.Teams
                 .Where(t => !string.IsNullOrEmpty(t.Name) && !string.IsNullOrEmpty(t.LogoUrl))
                 .OrderByDescending(t => t.Rating)
+                .Take(100)
                 .ToList();
 
             var teams = new List<TeamDto>();

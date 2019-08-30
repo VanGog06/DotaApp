@@ -63,7 +63,7 @@ namespace DotaApp.Api
             services.AddScoped<IItemService, ItemService>();
             services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<IAdminService, AdminService>();
-            services.AddScoped<ITeamsService, ITeamsService>();
+            services.AddScoped<ITeamService, TeamService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

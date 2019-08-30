@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DotaApp.Services.DataServices.Contracts
 {
-    public interface ITeamsService
+    public interface ITeamService
     {
         ICollection<TeamDto> All();
     }

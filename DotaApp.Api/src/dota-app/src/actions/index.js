@@ -4,3 +4,4 @@ export * from './heroActions';
 export * from './itemActions';
 export * from './commentActions';
 export * from './adminActions';
+export * from './teamActions';

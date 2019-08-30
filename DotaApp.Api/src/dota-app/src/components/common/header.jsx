@@ -36,6 +36,10 @@ const Header = () => {
             <Nav.Link>Items</Nav.Link>
           </IndexLinkContainer>
 
+          <IndexLinkContainer to='/teams'>
+            <Nav.Link>Teams</Nav.Link>
+          </IndexLinkContainer>
+
           {userData.user && userData.user.username && userData.user.username.localeCompare(appConstants.adminUsername) === 0 ?
             <IndexLinkContainer to='/review'>
               <Nav.Link>Review</Nav.Link>

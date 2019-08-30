@@ -26,6 +26,7 @@ import Items from './components/items/items';
 import ItemDetails from './components/items/itemDetails';
 import Profile from './components/profile/profile';
 import Review from './components/comments/review';
+import Teams from './components/teams/teams';
 
 import { history } from './helpers';
 
@@ -64,6 +65,7 @@ function App() {
           <Route path='/heroes' component={Heroes} />
           <Route path='/items/:id' component={ItemDetails} />
           <Route path='/items' component={Items} />
+          <Route path='/teams' component={Teams} />
         </Switch>
 
         <Footer />

@@ -56,7 +56,7 @@ namespace Sandbox
                 using (var client = new HttpClient())
                 {
                     //await PopulateHeroesAndRoles(mapper, context, client);
-                    await PopulateTeams(mapper, context, client);
+                    //await PopulateTeams(mapper, context, client);
                     //PopulateHeroAbilities(mapper, context);
                     //PopulateItems(mapper, context);
                 }
