@@ -8,6 +8,7 @@ namespace DotaApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class CommentsController : Controller
     {
         private readonly ICommentService commentService;

@@ -33,12 +33,12 @@ namespace DotaApp.Services.DataServices
 
             if (user == null)
             {
-                return null;
+                throw new DotaException(Constants.IncorrectUsernamePassword);
             }
 
             if (!VerifyPasswordHash(dto.Password, user.PasswordHash, user.PasswordSalt))
             {
-                return null;
+                throw new DotaException(Constants.IncorrectUsernamePassword);
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();

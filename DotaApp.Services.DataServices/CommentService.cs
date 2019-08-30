@@ -1,4 +1,5 @@
-﻿using DotaApp.Data;
+﻿using DotaApp.Common;
+using DotaApp.Data;
 using DotaApp.Data.Common;
 using DotaApp.Data.DbModels;
 using DotaApp.Services.DataServices.Contracts;
@@ -27,7 +28,7 @@ namespace DotaApp.Services.DataServices
 
             if (item == null)
             {
-                throw new DotaException("Item cannot be null");
+                throw new DotaException(Constants.InvalidOperation);
             }
 
             var comment = new Comment

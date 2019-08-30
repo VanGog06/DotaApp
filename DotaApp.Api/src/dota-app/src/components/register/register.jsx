@@ -15,6 +15,8 @@ import {
   alertActions
 } from '../../actions';
 
+import { appConstants } from '../../constants';
+
 const Register = () => {
   const dispatch = useDispatch();
 
@@ -66,8 +68,8 @@ const Register = () => {
     email: {
       required: true,
       validator: {
-        regEx: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-        error: 'Email is required'
+        regEx: appConstants.emailRegex,
+        error: 'Valid email is required'
       }
     }
   };
@@ -205,8 +207,8 @@ const Register = () => {
               value={state.email.value}
               onChange={handleOnChange}
               required
-              isValid={state.email.value.length > 0}
-              isInvalid={state.email.value.length === 0}
+              isValid={appConstants.emailRegex.test(state.email.value)}
+              isInvalid={!appConstants.emailRegex.test(state.email.value)}
             />
           </Col>
           {state.email.error && <Form.Label column sm={{span: 4, offset: 5}} className='text-danger text-bold'>{state.email.error}</Form.Label>}

@@ -6,5 +6,6 @@ export const appConstants = {
   commentDeleted: 'Comment deleted successfully',
   commentSubmitted: 'Comment submitted for review successfully',
   commentApproved: 'Comment approved successfully',
-  commentRejected: 'Comment rejected successfully'
+  commentRejected: 'Comment rejected successfully',
+  emailRegex: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 };

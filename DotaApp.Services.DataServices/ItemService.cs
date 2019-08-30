@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using DotaApp.Common;
 using DotaApp.Data;
+using DotaApp.Data.Common;
 using DotaApp.Services.DataServices.Contracts;
 using DotaApp.Services.Dtos.Items;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +28,7 @@ namespace DotaApp.Services.DataServices
                     Image = i.Image,
                     Name = i.Name
                 })
+                .OrderBy(i => i.Name)
                 .ToList();
 
             return items;
@@ -39,7 +42,7 @@ namespace DotaApp.Services.DataServices
 
             if (item == null)
             {
-                return null;
+                throw new DotaException(Constants.InvalidOperation);
             }
 
             var itemDto = new ItemDto

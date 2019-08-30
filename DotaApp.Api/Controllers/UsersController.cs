@@ -27,14 +27,16 @@ namespace DotaApp.Api.Controllers
                 return BadRequest(this.ModelState);
             }
 
-            var user = this.userService.Authenticate(usernamePasswordDto);
-
-            if (user == null)
+            try
             {
-                return BadRequest(new { message = Constants.IncorrectUsernamePassword });
-            }
+                var user = this.userService.Authenticate(usernamePasswordDto);
 
-            return Ok(user);
+                return Ok(user);
+            }
+            catch (DotaException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         [HttpPost("register")]
@@ -58,6 +60,7 @@ namespace DotaApp.Api.Controllers
         }
 
         [HttpPost("update/{id}")]
+        [Authorize]
         public IActionResult Update([FromBody] UpdateUserDto profile)
         {
             if (!this.ModelState.IsValid)
