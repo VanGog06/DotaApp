@@ -50,7 +50,7 @@ function App() {
         <Header />
         
         {alert.message &&
-          <Alert variant={alert.type}>
+          <Alert className='alertComponent' variant={alert.type}>
             {alert.message}
           </Alert>
         }
