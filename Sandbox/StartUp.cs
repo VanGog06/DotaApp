@@ -18,6 +18,7 @@ namespace Sandbox
     class StartUp
     {
         public static string HERO_STATS_URL = "https://api.opendota.com/api/heroStats";
+        public static string TEAMS_URL = "https://api.opendota.com/api/teams";
 
         public static async Task Main(string[] args)
         {
@@ -35,6 +36,10 @@ namespace Sandbox
 
                 cfg.CreateMap<ItemDto, Item>()
                     .ForMember(dest => dest.ItemAttributes, opt => opt.Ignore());
+
+                cfg.CreateMap<TeamDto, Team>()
+                    .ForMember(dest => dest.LogoUrl, opt => opt.MapFrom(t => string.IsNullOrEmpty(t.LogoUrl) ? string.Empty : t.LogoUrl))
+                    .ForMember(dest => dest.LastMatchTime, opt => opt.MapFrom(t => new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(t.LastMatchTime)));
             });
             var mapper = config.CreateMapper();
 
@@ -51,6 +56,7 @@ namespace Sandbox
                 using (var client = new HttpClient())
                 {
                     //await PopulateHeroesAndRoles(mapper, context, client);
+                    await PopulateTeams(mapper, context, client);
                     //PopulateHeroAbilities(mapper, context);
                     //PopulateItems(mapper, context);
                 }
@@ -87,6 +93,25 @@ namespace Sandbox
             }
 
             context.AddRange(heroes);
+            context.SaveChanges();
+        }
+
+        private static async Task PopulateTeams(IMapper mapper, DotaAppContext context, HttpClient client)
+        {
+            var response = await client.GetAsync(TEAMS_URL);
+            var content = await response.Content.ReadAsStringAsync();
+
+            var teamDtos = JsonConvert.DeserializeObject<List<TeamDto>>(content);
+            var teams = new List<Team>();
+
+            foreach (var teamDto in teamDtos)
+            {
+                var team = mapper.Map<Team>(teamDto);
+
+                teams.Add(team);
+            }
+
+            context.Teams.AddRange(teams);
             context.SaveChanges();
         }
 
