@@ -27,6 +27,7 @@ import ItemDetails from './components/items/itemDetails';
 import Profile from './components/profile/profile';
 import Review from './components/comments/review';
 import Teams from './components/teams/teams';
+import NotFound from './components/notFound';
 
 import { history } from './helpers';
 
@@ -66,6 +67,7 @@ function App() {
           <Route path='/items/:id' component={ItemDetails} />
           <Route path='/items' component={Items} />
           <Route path='/teams' component={Teams} />
+          <Route component={NotFound} />
         </Switch>
 
         <Footer />
