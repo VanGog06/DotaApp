@@ -17,9 +17,33 @@ namespace DotaApp.Services.DataServices.Tests
         {
             return new List<Hero>
             {
-                new Hero { Id = 1, Name = "Pesho", AttackRange = 2, AttackRate = 3.14, AttackType = "Mele" },
-                new Hero { Id = 2, Name = "Gosho", AttackRange = 1, AttackRate = 12.5, AttackType = "Range" },
-                new Hero { Id = 3, Name = "Stamat", AttackRange = 3, AttackRate = 1.24, AttackType = "Caster" }
+                new Hero { Id = 1, Name = "Pesho", AttackRange = 2, AttackRate = 3.14, AttackType = "Mele", Abilities = new List<Ability>
+                    {
+                        new Ability { AbilityName = "Mana Break", Behavior = "Passive", DamageType = "Physical", Pierce = "No", Description = "Description", Image = "Image", ManaCost = "90", Cooldown = "20", AbilityAttributes = new List<AbilityAttribute>
+                            {
+                                new AbilityAttribute { Generated = true, Header = "Header", Key = "Key", Value = "Value" }
+                            }
+                        }
+                    }
+                },
+                new Hero { Id = 2, Name = "Gosho", AttackRange = 1, AttackRate = 12.5, AttackType = "Range", Abilities = new List<Ability>
+                    {
+                        new Ability { AbilityName = "Mana Break", Behavior = "Passive", DamageType = "Physical", Pierce = "No", Description = "Description", Image = "Image", ManaCost = "90", Cooldown = "20", AbilityAttributes = new List<AbilityAttribute>
+                            {
+                                new AbilityAttribute { Generated = true, Header = "Header", Key = "Key", Value = "Value" }
+                            }
+                        }
+                    }
+                },
+                new Hero { Id = 3, Name = "Stamat", AttackRange = 3, AttackRate = 1.24, AttackType = "Caster", Abilities = new List<Ability>
+                    {
+                        new Ability { AbilityName = "Mana Break", Behavior = "Passive", DamageType = "Physical", Pierce = "No", Description = "Description", Image = "Image", ManaCost = "90", Cooldown = "20", AbilityAttributes = new List<AbilityAttribute>
+                            {
+                                new AbilityAttribute { Generated = true, Header = "Header", Key = "Key", Value = "Value" }
+                            }
+                        }
+                    }
+                }
             };
         }
 

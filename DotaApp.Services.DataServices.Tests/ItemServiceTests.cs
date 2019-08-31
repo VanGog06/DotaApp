@@ -17,9 +17,21 @@ namespace DotaApp.Services.DataServices.Tests
         {
             return new List<Item>
             {
-                new Item { Id = 1, Cost = 1000, Image = "Image one", Lore = "First lore", Name = "Item one" },
-                new Item { Id = 2, Cost = 4000, Image = "Image two", Lore = "Second lore", Name = "Item two" },
-                new Item { Id = 3, Cost = 1234, Image = "Image three", Lore = "Third lore", Name = "Item three" }
+                new Item { Id = 1, Cost = 1000, Image = "Image one", Lore = "First lore", Name = "Item one", ItemAttributes = new List<ItemAttribute>
+                    {
+                        new ItemAttribute { Footer = "Footer", Value = "Value", Key = "Key", Header = "Header" }
+                    }
+                },
+                new Item { Id = 2, Cost = 4000, Image = "Image two", Lore = "Second lore", Name = "Item two", ItemAttributes = new List<ItemAttribute>
+                    {
+                        new ItemAttribute { Footer = "Footer", Value = "Value", Key = "Key", Header = "Header" }
+                    }
+                },
+                new Item { Id = 3, Cost = 1234, Image = "Image three", Lore = "Third lore", Name = "Item three", ItemAttributes = new List<ItemAttribute>
+                    {
+                        new ItemAttribute { Footer = "Footer", Value = "Value", Key = "Key", Header = "Header" }
+                    }
+                }
             };
         }
 

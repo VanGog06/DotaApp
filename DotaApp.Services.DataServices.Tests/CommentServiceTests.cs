@@ -58,7 +58,7 @@ namespace DotaApp.Services.DataServices.Tests
         [Theory]
         [InlineData(2)]
         [InlineData(233)]
-        public void All_WithDummyComments_ShouldReturnCorrectResultsWhen(int itemId)
+        public void All_WithDummyComments_ShouldReturnCorrectResults(int itemId)
         {
             var context = DotaAppContextInitializer.InitializeContext();
             this.SeedComments(context);
