@@ -13,7 +13,7 @@ const Header = () => {
   const userData = useSelector(state => state.user);
 
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" expand="lg" variant="dark">
       <IndexLinkContainer to='/'>
         <Navbar.Brand href="/">
           {`<DotaApp />`}

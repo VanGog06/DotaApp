@@ -96,10 +96,10 @@ const Profile = _ => {
 
       <Form onSubmit={handleOnSubmit} className='col-sm-10 offset-sm-1 mt-5'>
         <Form.Group as={Row} controlId="formHorizontalUsername">
-          <Form.Label column sm={{span: 2, offset: 3}} className='text-white'>
+          <Form.Label column sm={5} md={{span: 4, offset: 1}} xl={{span: 2, offset: 3}} className='text-white'>
             Username
           </Form.Label>
-          <Col sm={4}>
+          <Col md={6} xl={4}>
             <Form.Control
               placeholder="Username"
               name='username'
@@ -114,10 +114,10 @@ const Profile = _ => {
         </Form.Group>
 
         <Form.Group as={Row} controlId="formHorizontalcurrentPassword">
-          <Form.Label column sm={{span: 2, offset: 3}} className='text-white'>
+          <Form.Label column sm={5} md={{span: 4, offset: 1}} xl={{span: 2, offset: 3}} className='text-white'>
             Current password
           </Form.Label>
-          <Col sm={4}>
+          <Col md={6} xl={4}>
             <Form.Control
               type="password"
               placeholder="Current password"
@@ -133,10 +133,10 @@ const Profile = _ => {
         </Form.Group>
 
         <Form.Group as={Row} controlId="formHorizontalNewPassword">
-          <Form.Label column sm={{span: 2, offset: 3}} className='text-white'>
+          <Form.Label column sm={5} md={{span: 4, offset: 1}} xl={{span: 2, offset: 3}} className='text-white'>
             New password
           </Form.Label>
-          <Col sm={4}>
+          <Col md={6} xl={4}>
             <Form.Control
               type="password"
               placeholder="New password"
@@ -152,10 +152,10 @@ const Profile = _ => {
         </Form.Group>
 
         <Form.Group as={Row} controlId="formHorizontalConfirmPassword">
-          <Form.Label column sm={{span: 2, offset: 3}} className='text-white'>
+          <Form.Label column sm={5} md={{span: 4, offset: 1}} xl={{span: 2, offset: 3}} className='text-white'>
             Confirm password
           </Form.Label>
-          <Col sm={4}>
+          <Col md={6} xl={4}>
             <Form.Control
               type="password"
               placeholder="Confirm password"
@@ -172,7 +172,7 @@ const Profile = _ => {
 
         <Form.Group as={Row} className='mt-5'>
           <Col>
-            <Button className='col-sm-2 offset-sm-5' type="submit" disabled={disable}>Update</Button>
+            <Button className='col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-lg-3 offset-lg-4 col-xl-2 offset-xl-5' type="submit" disabled={disable}>Update</Button>
           </Col>
         </Form.Group>
       </Form>

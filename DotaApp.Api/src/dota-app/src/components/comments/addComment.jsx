@@ -32,7 +32,7 @@ const AddComment = ({ handleCommentAdded }) => {
   };
 
   return (
-    <Form className={`${styles.form} col-sm-6 offset-sm-3`}>
+    <Form className={`${styles.form} col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3`}>
       <Form.Group className='text-center mb-0' controlId="comment">
         <Form.Control as='textarea' rows='3' value={comment} onChange={(event) => setComment(event.target.value)} />
       </Form.Group>
@@ -44,7 +44,7 @@ const AddComment = ({ handleCommentAdded }) => {
       : null}
 
       <Button
-        className={`${styles.addBtn} col-sm-4 offset-sm-4`}
+        className={`${styles.addBtn} col-sm-6 offset-sm-3 col-lg-4 offset-lg-4`}
         variant='primary'
         type='submit'
         disabled={comment.length < 10}

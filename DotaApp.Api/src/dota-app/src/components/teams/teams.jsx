@@ -13,7 +13,7 @@ const Teams = _ => {
     <div className={styles.container}>
       <h1 className='text-white text-center pt-4 pb-3'>Teams</h1>
 
-      <Table striped bordered hover variant="dark" className={`${styles.table} col-sm-8 offset-sm-2`}>
+      <Table striped bordered hover variant="dark" className={`${styles.table} col-md-10 offset-md-1 col-lg-8 offset-lg-2`}>
         <thead>
           <tr>
             <th>Rank</th>

@@ -13,7 +13,7 @@ const HeroDetails = ({ match }) => {
   return (
     hero ? 
       <div className={styles.container}>
-        <div className={`${styles.heroBanner} col-sm-8 offset-sm-2`}>
+        <div className={`${styles.heroBanner} col-lg-12 col-xl-8 offset-xl-2`}>
           <Image className={styles.heroBackground} src={`https://api.opendota.com${hero.image}`} fluid />
 
           <div className={styles.heroBannerDetails}>
@@ -27,7 +27,7 @@ const HeroDetails = ({ match }) => {
             </div>
 
             <div className={'col-sm-5'}>
-              <div className={`${styles.stats} col-sm-10 offset-sm-1`}>
+              <div className={`${styles.stats} col-lg-12 col-xl-10 offset-xl-1`}>
                 <div className='col-sm-4 text-center'>
                   <div className={`${styles.statCircle} ${styles.strengthBackground}`}></div>
                   <div className={`${styles.statText} ${styles.strengthTextColor}`}>{hero.baseStrength} + {hero.strengthGain}</div>
@@ -45,7 +45,7 @@ const HeroDetails = ({ match }) => {
               </div>
 
               <div className={`col-sm-12 ${styles.abilityContainer}`}>
-                {hero.abilities ?hero.abilities.map((ability, index) =>
+                {hero.abilities ? hero.abilities.map((ability, index) =>
                   <div className={styles.ability} key={index}>
                     <Image className={`${styles.abilityImage}`} src={`https://api.opendota.com${ability.image}`} fluid />
                   </div>

@@ -14,7 +14,7 @@ const ItemDetails = ({ match }) => {
   return (
     item.hasOwnProperty('image') ?
       <div className={styles.container}>
-        <div className={`${styles.itemBanner} col-sm-6 offset-sm-3`}>
+        <div className={`${styles.itemBanner} col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3`}>
           <Image className={styles.itemBackground} src={`https://api.opendota.com${item.image}`} fluid />
 
           <Row>

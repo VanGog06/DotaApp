@@ -33,7 +33,7 @@ const Comments = ({ itemId }) => {
   return (
     <div className={styles.container}>
       {isLoggedIn ?
-        <Nav justify className='col-sm-6 offset-sm-3 pr-0' variant='tabs' activeKey={selectedKey} onSelect={(selectedKey) => setSelectedKey(selectedKey)}>
+        <Nav justify className='col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 pr-0' variant='tabs' activeKey={selectedKey} onSelect={(selectedKey) => setSelectedKey(selectedKey)}>
           <>
             <Nav.Item>
               <Nav.Link className={styles.link} eventKey='all'>Comments</Nav.Link>
@@ -47,7 +47,7 @@ const Comments = ({ itemId }) => {
       : null}
 
       {selectedKey === 'all' ?
-        <div className='col-sm-6 offset-sm-3'>
+        <div className='col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3'>
           {
             comments ? comments.all
               .map((comment, index) => <Comment key={index} {...comment} handleDeleteComment={handleDeleteComment} />)
