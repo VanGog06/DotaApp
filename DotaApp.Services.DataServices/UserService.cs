@@ -92,7 +92,7 @@ namespace DotaApp.Services.DataServices
                 LastName = userDto.LastName,
                 PasswordHash = passwordHash,
                 PasswordSalt = passwordSalt,
-                Username = userDto.Password,
+                Username = userDto.Username,
                 Roles = new List<UserRole> { new UserRole { RoleId = userRole.Id } }
             };
 
