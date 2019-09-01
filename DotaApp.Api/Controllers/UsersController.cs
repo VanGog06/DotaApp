@@ -1,5 +1,4 @@
-﻿using DotaApp.Common;
-using DotaApp.Data.Common;
+﻿using DotaApp.Data.Common;
 using DotaApp.Services.DataServices.Contracts;
 using DotaApp.Services.Dtos.Users;
 using Microsoft.AspNetCore.Authorization;

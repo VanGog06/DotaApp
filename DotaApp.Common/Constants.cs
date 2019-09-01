@@ -11,5 +11,11 @@
         public const string ProvidedPasswordIsIncorrect = "The provided password is incorrect";
 
         public const string InvalidOperation = "Invalid operation";
+
+        public const string ValueCannotBeEmpty = "Value cannot be empty or whitespace only string.";
+
+        public const string InvalidPasswordHash = "Invalid length of password hash (64 bytes expected).";
+
+        public const string InvalidPasswordSalt = "Invalid length of password salt (128 bytes expected).";
     }
 }
